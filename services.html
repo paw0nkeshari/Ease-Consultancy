@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Ease Consultancy</title>
+  <meta name="description" content="Explore accounting, taxation, GST, audit, business advisory, finance and digital services from Ease Consultancy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --navy:#0b1f33; --navy2:#102d47; --blue:#1769aa; --blueLight:#eaf5ff;
+      --gold:#c89b3c; --goldSoft:#f6ecd6; --page:#f6f8fb; --card:#fff;
+      --ink:#17202a; --muted:#64748b; --line:#e5eaf0;
+      --shadow:0 24px 60px rgba(11,31,51,.12); --radius:22px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--page);transition:.25s}
+    body.dark{--page:#09131f;--card:#102030;--ink:#eef5fb;--muted:#aebdcc;--line:#25384a;--blueLight:#12283b;--goldSoft:#2b2518;--shadow:0 24px 60px rgba(0,0,0,.28)}
+    a{color:inherit} button{font:inherit}
+
+    .topbar{background:var(--navy);color:#fff;padding:10px 5%;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}
+    .topbar span{opacity:.88}
+    .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    body.dark .navbar{background:rgba(16,32,48,.94)}
+    .nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}
+    body.dark .brand{color:#fff}
+    .brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;box-shadow:0 8px 20px rgba(23,105,170,.25)}
+    .nav-links{display:flex;align-items:center;gap:7px;list-style:none;padding:0;margin:0}
+    .nav-links a{text-decoration:none;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted);transition:.2s}
+    .nav-links a:hover,.nav-links a.active{background:var(--blueLight);color:var(--blue)}
+    .mode-toggle{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:11px;cursor:pointer}
+    .menu-btn{display:none;border:0;background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.18),transparent 25%),linear-gradient(135deg,#eef7ff 0%,#fff 55%,#f7f3ea 100%);padding:76px 24px 88px}
+    body.dark .hero{background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.12),transparent 25%),linear-gradient(135deg,#0d2134 0%,#0b1723 60%,#211d13 100%)}
+    .hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--goldSoft);color:#8b6a25;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+    body.dark .eyebrow{color:#e7c96f}
+    .hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,66px);line-height:1.02;letter-spacing:-2px;margin:21px 0 14px;color:var(--navy)}
+    body.dark .hero h1{color:#fff}.hero h1 span{color:var(--blue)}body.dark .hero h1 span{color:#65b7ef}
+    .hero p{max-width:690px;color:var(--muted);font-size:17px;line-height:1.85;margin:0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--navy);color:#fff;box-shadow:0 12px 28px rgba(11,31,51,.2)}
+    .btn-secondary{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+
+    .hero-card{position:relative;max-width:430px;justify-self:center;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:29px;box-shadow:var(--shadow);overflow:hidden}
+    .hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-70px;background:var(--goldSoft)}
+    .hero-icon{position:relative;z-index:2;width:70px;height:70px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;font-size:28px}
+    .hero-card h3{position:relative;z-index:2;margin:22px 0 8px;font-size:22px;color:var(--navy)}
+    body.dark .hero-card h3{color:#fff}
+    .hero-card p{position:relative;z-index:2;font-size:14px;line-height:1.7}
+    .mini-list{position:relative;z-index:2;display:grid;gap:9px;margin-top:22px}
+    .mini-list div{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px}
+    .mini-list i{color:var(--blue)}
+
+    .section{max-width:1180px;margin:auto;padding:82px 24px}
+    .section-head{max-width:720px;margin-bottom:36px}
+    .kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
+    .section h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(31px,4vw,44px);margin:9px 0 13px}
+    body.dark .section h2{color:#fff}
+    .section-head p{color:var(--muted);line-height:1.8;margin:0}
+
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:27px;transition:.22s;display:flex;flex-direction:column;min-height:300px}
+    .service-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(11,31,51,.09);border-color:rgba(23,105,170,.35)}
+    .service-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--blueLight);color:var(--blue);font-size:20px;margin-bottom:20px}
+    .service-card h3{margin:0 0 11px;color:var(--navy);font-size:18px}
+    body.dark .service-card h3{color:#fff}
+    .service-card ul{padding:0;margin:0;list-style:none;display:grid;gap:9px;flex:1}
+    .service-card li{color:var(--muted);font-size:13px;line-height:1.45;padding-left:19px;position:relative}
+    .service-card li:before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+    .service-link{margin-top:20px;text-decoration:none;color:var(--blue);font-size:13px;font-weight:800}
+    .service-link i{margin-left:5px}
+
+    .contact-strip{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:28px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:var(--shadow)}
+    .contact-strip h2{color:#fff;margin:0 0 8px}.contact-strip p{margin:0;color:rgba(255,255,255,.7)}
+    .contact-strip .btn-primary{background:#fff;color:var(--navy);white-space:nowrap}
+
+    footer{background:#071725;color:#fff;padding:34px 24px}
+    .footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .footer-brand{font-weight:800}.footer-copy{color:rgba(255,255,255,.58);font-size:13px;margin-top:5px}
+    .footer-links{display:flex;gap:16px}.footer-links a{color:rgba(255,255,255,.62);font-size:12px;text-decoration:none}.footer-links a:hover{color:#fff}
+
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:40px}.hero-card{max-width:500px}.service-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){
+      .topbar{justify-content:center;text-align:center}.nav-inner{padding:13px 18px}.menu-btn{display:block}
+      .nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block}.mode-toggle{width:100%}
+      .hero{padding:58px 18px 70px}.hero h1{font-size:48px}.section{padding:65px 18px}.service-grid{grid-template-columns:1fr}
+      .contact-strip{padding:30px 24px;flex-direction:column;align-items:flex-start}.footer-inner{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:480px){.hero-actions .btn{width:100%}.service-card{min-height:0}}
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span><i class="fa-solid fa-circle-check"></i> Accounting, taxation & business advisory</span>
+    <span><i class="fa-solid fa-phone"></i> +91-9935479764</span>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span>Ease Consultancy</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="Owner Profile Page.HTML">About Owner</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-briefcase"></i> Complete business support</span>
+          <h1>Our <span>Services</span></h1>
+          <p>
+            Explore practical accounting, taxation, compliance, finance and business advisory
+            solutions designed to help individuals, entrepreneurs and businesses grow with confidence.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Discuss Your Requirement</a>
+            <a class="btn btn-secondary" href="#services"><i class="fa-solid fa-layer-group"></i> Browse Services</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <h3>One place for your financial needs.</h3>
+          <p>From day-to-day compliance to strategic business support, bring your requirements under one professional roof.</p>
+          <div class="mini-list">
+            <div><i class="fa-solid fa-check"></i> Accounting & Bookkeeping</div>
+            <div><i class="fa-solid fa-check"></i> Tax & GST Compliance</div>
+            <div><i class="fa-solid fa-check"></i> Audit & Assurance</div>
+            <div><i class="fa-solid fa-check"></i> Business & Finance Advisory</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head">
+        <div class="kicker">What We Do</div>
+        <h2>Professional services, organized for easy decisions.</h2>
+        <p>
+          Choose the area you need help with. Each service connects to its existing
+          dedicated page, so your current website journey remains intact.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Accounting & Bookkeeping</h3>
+          <ul><li>Financial Records Maintenance</li><li>Balance Sheet & P&amp;L Finalization</li><li>Bank Reconciliation & Accounts</li></ul>
+          <a class="service-link" href="accounting.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <h3>Income Tax Services</h3>
+          <ul><li>ITR Filing (All Types)</li><li>TDS Return Filing</li><li>Tax Planning & Notice Handling</li></ul>
+          <a class="service-link" href="Income Tax Services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-receipt"></i></div>
+          <h3>GST Services</h3>
+          <ul><li>GST Registration & Return Filing</li><li>GST Audit & Annual Return</li><li>E-Invoice & E-Way Bill</li></ul>
+          <a class="service-link" href="GST Services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Other Tax Services</h3>
+          <ul><li>PT Challan Filing</li><li>Legacy Tax Support</li><li>Equalization Levy</li><li>Professional Tax (PT)</li></ul>
+          <a class="service-link" href="Other Tax Services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+          <h3>Salary Slip & Payroll</h3>
+          <ul><li>Monthly Salary Slip Generation</li><li>Payroll Processing for Firms</li><li>Tax Compliant Salary Structuring</li></ul>
+          <a class="service-link" href="Salary Slip & Payroll Services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h3>PAN, Aadhaar & MSME</h3>
+          <ul><li>PAN Card Application & Correction</li><li>Aadhaar Update Support</li><li>MSME / Udyam Registration</li></ul>
+          <a class="service-link" href="small services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h3>Modern Finance</h3>
+          <ul><li>E-Invoicing Setup</li><li>Cloud Accounting</li><li>ERP/CRM Integration/Payroll & Payslip Processing</li></ul>
+          <a class="service-link" href="tally services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+          <h3>Company & LLP Services</h3>
+          <ul><li>Company/LLP Registration</li><li>MCA Filings, Director KYC</li><li>Closure / Strike-Off</li></ul>
+          <a class="service-link" href="Company Services.html">Company & LLP Services <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3>Audit & Assurance</h3>
+          <ul><li>Statutory & Tax Audit</li><li>Internal & Stock Audit</li><li>GST & System Audit</li></ul>
+          <a class="service-link" href="Auditing.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Startup & Business Advisory</h3>
+          <ul><li>Startup India Registration</li><li>Pitch Deck & Funding Support</li><li>Business Setup & Strategy</li></ul>
+          <a class="service-link" href="Business Startup.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>Loan & Finance Support</h3>
+          <ul><li>CMA Report & Project Report</li><li>Loan & Working Capital Assistance</li><li>Credit Rating Advisory</li></ul>
+          <a class="service-link" href="Finance and Loan.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Digital Certificates</h3>
+          <ul><li>Digital Signature Certificate (DSC)</li><li>Net Worth & Turnover Certificate</li><li>15CA / 15CB & Loan Certificate</li></ul>
+          <a class="service-link" href="Certifications.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>Valuation Services</h3>
+          <ul><li>Business Valuation</li><li>Startup/Share Valuation</li><li>FEMA/IT/Co Act Reports</li><li>Intangible Asset Valuation</li></ul>
+          <a class="service-link" href="valuation.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-gavel"></i></div>
+          <h3>Representation & Litigation</h3>
+          <ul><li>IT Scrutiny Replies</li><li>GST Representation</li><li>Appeal Filing</li><li>Faceless Assessment</li></ul>
+          <a class="service-link" href="Representation & Litigation.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
+          <h3>Extra Advisory Services</h3>
+          <ul><li>Wealth & Estate Planning</li><li>Succession Planning</li><li>Cash Flow Forecasting</li><li>Franchise Model Advisory</li></ul>
+          <a class="service-link" href="Extra Advisory Services.html">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="contact-strip">
+        <div>
+          <h2>Looking for something specific?</h2>
+          <p>Contact us for customized CA and business solutions for you or your organization.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2025 Ease Consultancy. All rights reserved.</div></div>
+      <div class="footer-links"><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const body=document.body, modeToggle=document.getElementById("modeToggle"), navLinks=document.getElementById("navLinks"), menuBtn=document.getElementById("menuBtn");
+    function updateIcon(){modeToggle.innerHTML=body.classList.contains("dark")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}
+    if(localStorage.getItem("easeTheme")==="dark")body.classList.add("dark"); updateIcon();
+    modeToggle.addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("easeTheme",body.classList.contains("dark")?"dark":"light");updateIcon()});
+    menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.innerHTML=navLinks.classList.contains("open")?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+  </script>
+</body>
+</html>
