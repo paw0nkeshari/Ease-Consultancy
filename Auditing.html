@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditing & Assurance Services | Ease Consultancy</title>
+<meta name="description" content="Auditing and assurance services including statutory audit, tax audit, internal audit, GST audit, concurrent audit, forensic audit, stock audit, process audit and due diligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--navy:#0b1f33;--navy2:#102d47;--blue:#1769aa;--blueLight:#eaf5ff;--gold:#c89b3c;--goldSoft:#f6ecd6;--page:#f6f8fb;--card:#fff;--ink:#17202a;--muted:#64748b;--line:#e5eaf0;--shadow:0 24px 60px rgba(11,31,51,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--page);transition:.25s}
+body.dark{--page:#09131f;--card:#102030;--ink:#eef5fb;--muted:#aebdcc;--line:#25384a;--blueLight:#12283b;--goldSoft:#2b2518;--shadow:0 24px 60px rgba(0,0,0,.28)}
+a{color:inherit}
+
+.topbar{background:var(--navy);color:#fff;padding:10px 5%;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}
+.topbar span{opacity:.88}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body.dark .navbar{background:rgba(16,32,48,.94)}
+.nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}
+body.dark .brand{color:#fff}
+.brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;box-shadow:0 8px 20px rgba(23,105,170,.25)}
+.nav-links{display:flex;align-items:center;gap:7px;list-style:none;padding:0;margin:0}
+.nav-links a{text-decoration:none;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted);transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blueLight);color:var(--blue)}
+.mode-toggle{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:11px;cursor:pointer}
+.menu-btn{display:none;border:0;background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.18),transparent 25%),linear-gradient(135deg,#eef7ff 0%,#fff 55%,#f7f3ea 100%);padding:76px 24px 86px}
+body.dark .hero{background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.12),transparent 25%),linear-gradient(135deg,#0d2134 0%,#0b1723 60%,#211d13 100%)}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--goldSoft);color:#8b6a25;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+body.dark .eyebrow{color:#e7c96f}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,64px);line-height:1.03;letter-spacing:-2px;margin:20px 0 14px;color:var(--navy)}
+body.dark .hero h1{color:#fff}.hero h1 span{color:var(--blue)}body.dark .hero h1 span{color:#65b7ef}
+.hero p{max-width:700px;color:var(--muted);font-size:17px;line-height:1.85;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--navy);color:#fff;box-shadow:0 12px 28px rgba(11,31,51,.2)}.btn-secondary{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-75px;top:-75px;background:var(--goldSoft)}
+.hero-icon{position:relative;z-index:2;width:70px;height:70px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;font-size:28px}
+.hero-card h3{position:relative;z-index:2;margin:21px 0 8px;color:var(--navy);font-size:22px}body.dark .hero-card h3{color:#fff}
+.hero-card p{position:relative;z-index:2;color:var(--muted);font-size:14px;line-height:1.75}
+.mini-list{position:relative;z-index:2;display:grid;gap:10px;margin-top:20px}.mini-list div{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}.mini-list i{color:var(--blue)}
+
+.section{max-width:1180px;margin:auto;padding:78px 24px}
+.section-head{text-align:center;max-width:800px;margin:0 auto 34px}
+.kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
+.section h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(31px,4vw,44px);margin:9px 0 13px}body.dark .section h2{color:#fff}
+.section-head p{color:var(--muted);line-height:1.8;margin:0}
+
+.audit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.audit-card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:20px;padding:24px;cursor:pointer;transition:.22s;box-shadow:0 9px 26px rgba(11,31,51,.05)}
+.audit-card:hover,.audit-card:focus{transform:translateY(-5px);box-shadow:0 18px 38px rgba(11,31,51,.10);outline:none}
+.audit-card.expanded{border-color:rgba(23,105,170,.45);border-left-color:var(--gold)}
+.audit-top{display:flex;align-items:flex-start;gap:15px}
+.audit-icon{width:50px;height:50px;flex:0 0 auto;border-radius:14px;background:var(--blueLight);color:var(--blue);display:grid;place-items:center;font-size:19px}
+.audit-card h3{margin:0;color:var(--navy);font-size:18px}body.dark .audit-card h3{color:#fff}
+.audit-card .subtitle{color:var(--muted);font-size:12.5px;margin:6px 0 0;line-height:1.5}
+.audit-details{display:none;margin-top:17px;padding:14px 15px;background:var(--blueLight);border-radius:12px;color:var(--muted);font-size:13px;line-height:1.7}
+.audit-card.expanded .audit-details{display:block;animation:fadeIn .25s ease}
+.expand-hint{margin-top:17px;color:var(--blue);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
+.audit-card.expanded .expand-hint i{transform:rotate(180deg)}.expand-hint i{transition:.2s;margin-right:4px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+.pricing{margin-top:55px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 35px rgba(11,31,51,.06)}
+.pricing-head{padding:24px;text-align:center;border-bottom:1px solid var(--line)}.pricing-head .kicker{margin-bottom:5px}
+table{width:100%;border-collapse:collapse}th,td{padding:15px 20px;text-align:left;border-bottom:1px solid var(--line);font-size:13px}th{background:var(--blueLight);color:var(--navy);font-weight:800}body.dark th{color:#fff}tbody tr:last-child td{border-bottom:0}td:last-child{font-weight:800;color:var(--blue);white-space:nowrap}
+
+.note{margin-top:24px;background:var(--goldSoft);border:1px solid rgba(200,155,60,.25);border-radius:18px;padding:20px 22px;display:flex;gap:13px;align-items:flex-start}
+.note i{color:var(--gold);font-size:19px;margin-top:2px}.note p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.note strong{color:var(--ink)}
+
+.cta{max-width:1180px;margin:0 auto 78px;padding:0 24px}.cta-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:28px;padding:39px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;box-shadow:var(--shadow)}
+.cta-box h2{color:#fff;margin:0 0 7px;font-family:"Playfair Display",serif;font-size:30px}.cta-box p{margin:0;color:rgba(255,255,255,.7)}.cta-box a{background:#fff;color:var(--navy);padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;white-space:nowrap}
+
+footer{background:#071725;color:#fff;padding:34px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font-weight:800}.footer-copy{color:rgba(255,255,255,.58);font-size:13px;margin-top:5px}.footer-links{display:flex;gap:16px}.footer-links a{color:rgba(255,255,255,.62);font-size:12px;text-decoration:none}.footer-links a:hover{color:#fff}
+
+@media(max-width:950px){.audit-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){.hero-inner{grid-template-columns:1fr}.hero-card{max-width:620px}}
+@media(max-width:720px){
+ .topbar{justify-content:center;text-align:center}.nav-inner{padding:13px 18px}.menu-btn{display:block}
+ .nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block}.mode-toggle{width:100%}
+ .hero{padding:58px 18px 68px}.hero h1{font-size:48px}.section{padding:58px 18px}.audit-grid{grid-template-columns:1fr}
+ .cta{padding:0 18px;margin-bottom:58px}.cta-box{padding:29px 24px;flex-direction:column;align-items:flex-start}
+ .pricing{overflow-x:auto}table{min-width:520px}.footer-inner{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){.hero-actions .btn{width:100%}}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+ <span><i class="fa-solid fa-circle-check"></i> Accounting, taxation & business advisory</span>
+ <span><i class="fa-solid fa-phone"></i> +91-9935479764</span>
+</div>
+
+<nav class="navbar">
+ <div class="nav-inner">
+  <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span>Ease Consultancy</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="index.html">Home</a></li><li><a class="active" href="services.html">Services</a></li>
+   <li><a href="Owner Profile Page.HTML">About Owner</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li>
+   <li><button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+  </ul>
+ </div>
+</nav>
+
+<main>
+<section class="hero">
+ <div class="hero-inner">
+  <div>
+   <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Audit & assurance</span>
+   <h1>Auditing & <span>Assurance</span> Services</h1>
+   <p>Strengthen your business with accurate auditing, internal controls, and compliance checks — designed to improve transparency, reduce risk, and support better decisions.</p>
+   <div class="hero-actions">
+    <a class="btn btn-primary" href="#pricing"><i class="fa-solid fa-tags"></i> View Audit Pricing</a>
+    <a class="btn btn-secondary" href="Owner Profile Page.html"><i class="fa-solid fa-headset"></i> Request Consultation</a>
+   </div>
+  </div>
+
+  <div class="hero-card">
+   <div class="hero-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+   <h3>Independent review. Better control. Lower risk.</h3>
+   <p>Audit work gives management a clearer view of financial accuracy, compliance gaps, operational risks, and areas that need corrective action.</p>
+   <div class="mini-list">
+    <div><i class="fa-solid fa-check"></i> Financial & statutory compliance</div>
+    <div><i class="fa-solid fa-check"></i> Internal control evaluation</div>
+    <div><i class="fa-solid fa-check"></i> GST & tax audit support</div>
+    <div><i class="fa-solid fa-check"></i> Fraud, stock & process review</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="section-head">
+  <div class="kicker">Audit Services</div>
+  <h2>Coverage across finance, compliance & risk.</h2>
+  <p>Explore the nine audit and assurance services from the original page. Click a card to reveal its detailed scope.</p>
+ </div>
+
+ <div class="audit-grid">
+ <article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-book"></i></div>
+    <div>
+      <h3>Statutory Audit</h3>
+      <p class="subtitle">Audit as per Companies Act</p>
+    </div>
+  </div>
+  <div class="audit-details">Mandatory under Companies Act. We ensure your financials comply with legal standards with certified audit reports.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="statutory-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-file-invoice"></i></div>
+    <div>
+      <h3>Tax Audit (Sec 44AB)</h3>
+      <p class="subtitle">Turnover-based tax compliance</p>
+    </div>
+  </div>
+  <div class="audit-details">For businesses crossing turnover thresholds. We assist in preparing and submitting required tax audit reports.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="tax-audit-44ab.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+    <div>
+      <h3>Internal Audit</h3>
+      <p class="subtitle">Improve internal control</p>
+    </div>
+  </div>
+  <div class="audit-details">Strengthen internal controls, prevent errors/fraud, and increase operational efficiency through expert audit practices.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="internal-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-receipt"></i></div>
+    <div>
+      <h3>GST Audit</h3>
+      <p class="subtitle">GST compliance and analysis</p>
+    </div>
+  </div>
+  <div class="audit-details">We help you stay compliant with GST law by checking return accuracy and reconciliations.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="gst-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-building-columns"></i></div>
+    <div>
+      <h3>Concurrent Audit</h3>
+      <p class="subtitle">Live audit for financial entities</p>
+    </div>
+  </div>
+  <div class="audit-details">For banks and NBFCs. Real-time auditing of financial operations to ensure transparency and compliance.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="concurrent-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-user-secret"></i></div>
+    <div>
+      <h3>Forensic Audit</h3>
+      <p class="subtitle">Detect fraud and anomalies</p>
+    </div>
+  </div>
+  <div class="audit-details">Fraud detection, forensic analysis, and financial investigation for whistleblowing or litigation support.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="forensic-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+    <div>
+      <h3>Stock Audit</h3>
+      <p class="subtitle">Inventory health checks</p>
+    </div>
+  </div>
+  <div class="audit-details">Independent inventory verification for internal record accuracy or loan requirements.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="stock-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-gears"></i></div>
+    <div>
+      <h3>Process Audit</h3>
+      <p class="subtitle">Improve system effectiveness</p>
+    </div>
+  </div>
+  <div class="audit-details">Audit your internal systems for efficiency, process quality, and risk reduction.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="process-audit.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+<article class="audit-card" tabindex="0">
+  <div class="audit-top">
+    <div class="audit-icon"><i class="fa-solid fa-handshake"></i></div>
+    <div>
+      <h3>Due Diligence</h3>
+      <p class="subtitle">Pre-investment audit</p>
+    </div>
+  </div>
+  <div class="audit-details">We evaluate the financial, legal, and operational risks before merger, acquisition, or investment deals.</div>
+  <div class="expand-hint"><a class="service-detail-link" href="due-diligence.html"><i class="fa-solid fa-chevron-down"></i> View service details</a></div>
+</article>
+ </div>
+
+ <div class="pricing" id="pricing">
+  <div class="pricing-head">
+   <div class="kicker">Starting Prices</div>
+   <h2>Audit Service Pricing</h2>
+   <p style="color:var(--muted);margin:0;font-size:13px;">Indicative starting prices carried forward from the original service page.</p>
+  </div>
+  <table>
+   <thead><tr><th>Service</th><th>Starts From</th></tr></thead>
+   <tbody>
+    <tr><td>Statutory Audit</td><td>₹25,000</td></tr>
+    <tr><td>Tax Audit</td><td>₹15,000</td></tr>
+    <tr><td>GST Audit</td><td>₹12,000</td></tr>
+    <tr><td>Due Diligence</td><td>₹40,000</td></tr>
+   </tbody>
+  </table>
+ </div>
+
+ <div class="note">
+  <i class="fa-solid fa-circle-info"></i>
+  <p><strong>Looking for something specific?</strong><br>Contact us for customized CA solutions for you or your business.</p>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="cta-box">
+  <div><h2>Need an audit tailored to your business?</h2><p>Request a consultation and discuss your audit or assurance requirement.</p></div>
+  <a href="Owner Profile Page.html">Request Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="footer-inner">
+  <div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2025 Ease Consultancy. All rights reserved.</div></div>
+  <div class="footer-links"><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+ </div>
+</footer>
+
+<script>
+const body=document.body,modeToggle=document.getElementById("modeToggle"),navLinks=document.getElementById("navLinks"),menuBtn=document.getElementById("menuBtn");
+function updateIcon(){modeToggle.innerHTML=body.classList.contains("dark")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}
+if(localStorage.getItem("easeTheme")==="dark")body.classList.add("dark");
+updateIcon();
+modeToggle.addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("easeTheme",body.classList.contains("dark")?"dark":"light");updateIcon()});
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.innerHTML=navLinks.classList.contains("open")?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+document.querySelectorAll(".audit-card").forEach(card=>{
+  card.addEventListener("click",()=>{
+    const wasOpen=card.classList.contains("expanded");
+    document.querySelectorAll(".audit-card").forEach(c=>c.classList.remove("expanded"));
+    if(!wasOpen) card.classList.add("expanded");
+  });
+  card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();card.click()}});
+});
+</script>
+</body>
+</html>

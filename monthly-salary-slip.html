@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Salary Slip | Ease Consultancy</title>
+<meta name="description" content="Monthly generation of professional salary slips with detailed earnings, deductions and net payable information for employees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+ --navy:#0b1f33;--navy2:#102d47;--blue:#1769aa;--blueLight:#eaf5ff;
+ --gold:#c89b3c;--goldSoft:#f6ecd6;--page:#f6f8fb;--card:#fff;
+ --ink:#17202a;--muted:#64748b;--line:#e5eaf0;
+ --shadow:0 24px 60px rgba(11,31,51,.12)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--page);transition:.25s}
+body.dark{--page:#09131f;--card:#102030;--ink:#eef5fb;--muted:#aebdcc;--line:#25384a;--blueLight:#12283b;--goldSoft:#2b2518;--shadow:0 24px 60px rgba(0,0,0,.28)}
+a{color:inherit}
+.topbar{background:var(--navy);color:#fff;padding:10px 5%;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}
+.topbar span{opacity:.88}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body.dark .navbar{background:rgba(16,32,48,.94)}
+.nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}
+body.dark .brand{color:#fff}
+.brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff}
+.nav-links{display:flex;align-items:center;gap:7px;list-style:none;padding:0;margin:0}
+.nav-links a{text-decoration:none;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted)}
+.nav-links a:hover,.nav-links a.active{background:var(--blueLight);color:var(--blue)}
+.mode-toggle{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:11px;cursor:pointer}
+.menu-btn{display:none;border:0;background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.18),transparent 25%),linear-gradient(135deg,#eef7ff 0%,#fff 55%,#f7f3ea 100%);padding:72px 24px 78px}
+body.dark .hero{background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.12),transparent 25%),linear-gradient(135deg,#0d2134 0%,#0b1723 60%,#211d13 100%)}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--goldSoft);color:#8b6a25;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+body.dark .eyebrow{color:#e7c96f}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,62px);line-height:1.04;letter-spacing:-2px;margin:20px 0 14px;color:var(--navy)}
+body.dark .hero h1{color:#fff}.hero h1 span{color:var(--blue)}body.dark .hero h1 span{color:#65b7ef}
+.hero p{max-width:700px;color:var(--muted);font-size:17px;line-height:1.85;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-secondary{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-75px;top:-75px;background:var(--goldSoft)}
+.hero-icon{position:relative;z-index:2;width:70px;height:70px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;font-size:28px}
+.hero-card h3{position:relative;z-index:2;margin:21px 0 8px;color:var(--navy);font-size:22px}
+body.dark .hero-card h3{color:#fff}
+.hero-card p{position:relative;z-index:2;color:var(--muted);font-size:14px;line-height:1.75}
+.mini-list{position:relative;z-index:2;display:grid;gap:11px;margin-top:20px}
+.mini-list div{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.5}.mini-list i{color:var(--blue);margin-top:3px}
+.section{max-width:1180px;margin:auto;padding:74px 24px}
+.section-head{text-align:center;max-width:800px;margin:0 auto 34px}
+.kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
+.section h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(30px,4vw,43px);margin:9px 0 13px}
+body.dark .section h2{color:#fff}
+.section-head p{color:var(--muted);line-height:1.8;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:27px;box-shadow:0 10px 28px rgba(11,31,51,.05)}
+.info-card h3{margin:0 0 10px;color:var(--navy);font-size:19px}body.dark .info-card h3{color:#fff}
+.info-card p{color:var(--muted);font-size:14px;line-height:1.8;margin:0}
+.list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.list li{display:flex;gap:10px;color:var(--muted);font-size:14px;line-height:1.55}
+.list i{color:var(--blue);margin-top:4px}
+.highlight{margin-top:22px;background:var(--blueLight);border:1px solid rgba(23,105,170,.12);border-radius:20px;padding:24px}
+.highlight strong{display:block;color:var(--navy);margin-bottom:7px}body.dark .highlight strong{color:#fff}
+.highlight p{margin:0;color:var(--muted);line-height:1.75;font-size:14px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:23px}
+.step-num{width:36px;height:36px;border-radius:11px;background:var(--blueLight);color:var(--blue);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+.step h3{margin:0 0 7px;color:var(--navy);font-size:16px}body.dark .step h3{color:#fff}
+.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.price-box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:27px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.price-label{color:var(--muted);font-size:13px}.price{font-size:30px;font-weight:800;color:var(--blue);margin-top:5px}
+.price-note{color:var(--muted);font-size:12px;line-height:1.6}
+.cta{max-width:1180px;margin:0 auto 78px;padding:0 24px}
+.cta-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:28px;padding:39px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;box-shadow:var(--shadow)}
+.cta-box h2{color:#fff;margin:0 0 7px;font-family:"Playfair Display",serif;font-size:30px}.cta-box p{margin:0;color:rgba(255,255,255,.7);line-height:1.6}
+.cta-box a{background:#fff;color:var(--navy);padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;white-space:nowrap}
+.breadcrumb{max-width:1180px;margin:auto;padding:18px 24px 0;font-size:12px;color:var(--muted)}
+.breadcrumb a{text-decoration:none;color:var(--blue);font-weight:700}
+footer{background:#071725;color:#fff;padding:34px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-brand{font-weight:800}.footer-copy{color:rgba(255,255,255,.58);font-size:13px;margin-top:5px}.footer-links{display:flex;gap:16px}.footer-links a{color:rgba(255,255,255,.62);font-size:12px;text-decoration:none}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.process{grid-template-columns:1fr}.price-box{align-items:flex-start;flex-direction:column}.hero-card{max-width:680px}}
+@media(max-width:720px){.topbar{justify-content:center;text-align:center}.nav-inner{padding:13px 18px}.menu-btn{display:block}.nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}.nav-links.open{display:flex}.nav-links a{display:block}.mode-toggle{width:100%}.hero{padding:55px 18px 65px}.hero h1{font-size:47px}.section{padding:55px 18px}.cta{padding:0 18px;margin-bottom:55px}.cta-box{padding:29px 24px;flex-direction:column;align-items:flex-start}.footer-inner{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="topbar">
+ <span><i class="fa-solid fa-circle-check"></i> Accounting, taxation & business advisory</span>
+ <span><i class="fa-solid fa-phone"></i> +91-9935479764</span>
+</div>
+<nav class="navbar">
+ <div class="nav-inner">
+  <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span>Ease Consultancy</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+   <li><a href="Owner Profile Page.HTML">About Owner</a></li><li><a href="about.html">About Us</a></li>
+   <li><a class="active" href="contact.html">Contact Us</a></li>
+   <li><button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+  </ul>
+ </div>
+</nav>
+
+<div class="breadcrumb"><a href="Salary Slip & Payroll Services(2).html">Payroll Services</a> <i class="fa-solid fa-angle-right"></i> Monthly Salary Slip</div>
+
+<main>
+<section class="hero">
+ <div class="hero-inner">
+  <div>
+   <span class="eyebrow"><i class="fa-solid fa-file-invoice"></i> Payroll Documentation</span>
+   <h1>Monthly Salary Slip</h1>
+   <p>Monthly generation of professional salary slips with detailed earnings, deductions and net payable information for employees.</p>
+   <div class="hero-actions">
+    <a class="btn btn-primary" href="#scope"><i class="fa-solid fa-arrow-down"></i> Explore Service</a>
+    <a class="btn btn-secondary" href="contact.html"><i class="fa-solid fa-headset"></i> Request Support</a>
+   </div>
+  </div>
+  <div class="hero-card">
+   <div class="hero-icon"><i class="fa-solid fa-file-invoice"></i></div>
+   <h3>Employee Payslip Delivery</h3>
+   <p>Monthly generation of professional salary slips that include detailed earnings, deductions (PF, ESI, PT, TDS), and net payable. Slips are generated in PDF format with your company's logo.</p>
+   <div class="mini-list">
+    <div><i class="fa-solid fa-check"></i>Detailed earnings and salary components</div><div><i class="fa-solid fa-check"></i>PF, ESI, Professional Tax and TDS deductions</div><div><i class="fa-solid fa-check"></i>Net payable amount</div><div><i class="fa-solid fa-check"></i>PDF salary slip generation</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="scope">
+ <div class="section-head">
+  <div class="kicker">Detailed Service Scope</div>
+  <h2>What this service covers.</h2>
+  <p>Monthly generation of professional salary slips that include detailed earnings, deductions (PF, ESI, PT, TDS), and net payable. Slips are generated in PDF format with your company's logo.</p>
+ </div>
+ <div class="grid">
+  <div class="info-card">
+   <h3><i class="fa-solid fa-list-check" style="color:var(--blue);margin-right:8px"></i>Included in Scope</h3>
+   <ul class="list"><li><i class="fa-solid fa-check"></i><span>Detailed earnings and salary components</span></li>
+<li><i class="fa-solid fa-check"></i><span>PF, ESI, Professional Tax and TDS deductions</span></li>
+<li><i class="fa-solid fa-check"></i><span>Net payable amount</span></li>
+<li><i class="fa-solid fa-check"></i><span>PDF salary slip generation</span></li>
+<li><i class="fa-solid fa-check"></i><span>Company logo on salary documentation</span></li></ul>
+  </div>
+  <div class="info-card">
+   <h3><i class="fa-solid fa-file-lines" style="color:var(--blue);margin-right:8px"></i>Information & Delivery</h3>
+   <div class="highlight"><strong>Typical information required</strong><p>Employee salary and deduction information required to prepare the monthly salary slip.</p></div>
+   <div class="highlight"><strong>Service output</strong><p>Professional PDF salary slips prepared for employee payslip delivery.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="section-head">
+  <div class="kicker">Service Journey</div>
+  <h2>How the service is organized.</h2>
+  <p>The steps below present the service scope from the uploaded payroll page in a clear client-facing journey.</p>
+ </div>
+ <div class="process"><div class="step"><div class="step-num">01</div><h3>Requirement Review</h3><p>Review the information relevant to the selected payroll service and confirm the requested scope.</p></div>
+<div class="step"><div class="step-num">02</div><h3>Service Preparation</h3><p>Monthly generation of professional salary slips that include detailed earnings, deductions (PF, ESI, PT, TDS), and net payable. Slips are generated in PDF format with your company's logo.</p></div>
+<div class="step"><div class="step-num">03</div><h3>Documentation / Delivery</h3><p>Professional PDF salary slips prepared for employee payslip delivery.</p></div></div>
+</section>
+
+<section class="section">
+ <div class="section-head">
+  <div class="kicker">Starting Price</div>
+  <h2>Transparent service reference.</h2>
+  <p>The price shown below is the starting price stated in the uploaded payroll service page.</p>
+ </div>
+ <div class="price-box">
+  <div><div class="price-label">Monthly Salary Slip</div><div class="price">₹49 per employee/month</div></div>
+  <div class="price-note">Final scope, applicable charges and requirements should be confirmed with Ease Consultancy before engagement.</div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="cta-box">
+  <div><h2>Need monthly salary slip support?</h2><p>Share your requirement with Ease Consultancy for service-specific assistance.</p></div>
+  <a href="contact.html">Request Support <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="footer-inner">
+  <div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2025 Ease Consultancy. All rights reserved.</div></div>
+  <div class="footer-links"><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+ </div>
+</footer>
+<script>
+const body=document.body,modeToggle=document.getElementById("modeToggle"),navLinks=document.getElementById("navLinks"),menuBtn=document.getElementById("menuBtn");
+function updateIcon(){modeToggle.innerHTML=body.classList.contains("dark")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}
+if(localStorage.getItem("easeTheme")==="dark")body.classList.add("dark");updateIcon();
+modeToggle.addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("easeTheme",body.classList.contains("dark")?"dark":"light");updateIcon()});
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.innerHTML=navLinks.classList.contains("open")?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+</script>
+</body>
+</html>

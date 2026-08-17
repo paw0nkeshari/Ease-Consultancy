@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAN, Aadhaar & MSME Services | Ease Consultancy</title>
+<meta name="description" content="PAN, Aadhaar, MSME/Udyam and other legal and compliance support services by Ease Consultancy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--navy:#0b1f33;--navy2:#102d47;--blue:#1769aa;--blueLight:#eaf5ff;--gold:#c89b3c;--goldSoft:#f6ecd6;--page:#f6f8fb;--card:#fff;--ink:#17202a;--muted:#64748b;--line:#dce6ef;--shadow:0 24px 60px rgba(11,31,51,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--page);transition:.25s}
+body.dark{--page:#09131f;--card:#102030;--ink:#eef5fb;--muted:#aebdcc;--line:#25384a;--blueLight:#12283b;--goldSoft:#2b2518;--shadow:0 24px 60px rgba(0,0,0,.28)}
+.topbar{background:var(--navy);color:#fff;padding:10px 5%;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}.topbar span{opacity:.88}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}body.dark .navbar{background:rgba(16,32,48,.94)}
+.nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}.brand{text-decoration:none;display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}body.dark .brand{color:#fff}.brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;box-shadow:0 8px 20px rgba(23,105,170,.25)}
+.nav-links{display:flex;align-items:center;gap:7px;list-style:none;padding:0;margin:0}.nav-links a{text-decoration:none;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted);transition:.2s}.nav-links a:hover,.nav-links a.active{background:var(--blueLight);color:var(--blue)}.mode-toggle{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:11px;cursor:pointer}.menu-btn{display:none;border:0;background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.18),transparent 25%),radial-gradient(circle at 10% 85%,rgba(23,105,170,.10),transparent 28%),linear-gradient(135deg,#eef7ff 0%,#fff 55%,#f7f3ea 100%);padding:76px 24px 86px}body.dark .hero{background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.12),transparent 25%),radial-gradient(circle at 10% 85%,rgba(23,105,170,.13),transparent 28%),linear-gradient(135deg,#0d2134 0%,#0b1723 60%,#211d13 100%)}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--goldSoft);color:#8b6a25;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}body.dark .eyebrow{color:#e7c96f}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,64px);line-height:1.03;letter-spacing:-2px;margin:20px 0 14px;color:var(--navy)}body.dark .hero h1{color:#fff}.hero h1 span{color:var(--blue)}body.dark .hero h1 span{color:#65b7ef}.hero p{max-width:700px;color:var(--muted);font-size:17px;line-height:1.85;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--navy);color:#fff;box-shadow:0 12px 28px rgba(11,31,51,.2)}.btn-secondary{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-80px;top:-80px;background:var(--goldSoft)}.hero-icon{position:relative;z-index:2;width:70px;height:70px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;font-size:28px}.hero-card h3{position:relative;z-index:2;margin:21px 0 8px;color:var(--navy);font-size:22px}body.dark .hero-card h3{color:#fff}.hero-card p{position:relative;z-index:2;color:var(--muted);font-size:14px;line-height:1.75}.mini-list{position:relative;z-index:2;display:grid;gap:10px;margin-top:20px}.mini-list div{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}.mini-list i{color:var(--blue)}
+.section{max-width:1180px;margin:auto;padding:78px 24px}.section-head{text-align:center;max-width:820px;margin:0 auto 34px}.kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}.section h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(31px,4vw,44px);margin:9px 0 13px}body.dark .section h2{color:#fff}.section-head p{color:var(--muted);line-height:1.8;margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid #b9d6ec;border-radius:28px;padding:30px;cursor:pointer;transition:.25s;box-shadow:0 12px 32px rgba(11,31,51,.07);position:relative;overflow:hidden}.service-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue);transform:scaleY(0);transform-origin:bottom;transition:.25s}.service-card:hover,.service-card:focus{transform:translateY(-7px);box-shadow:0 22px 44px rgba(11,31,51,.12);outline:none}.service-card:hover:before,.service-card:focus:before{transform:scaleY(1)}.service-link:after{content:"View details →";display:inline-block;margin-top:18px;color:var(--blue);font-size:13px;font-weight:800}.service-link:hover:after{transform:translateX(2px)}.service-icon{width:72px;height:72px;border-radius:20px;background:var(--blueLight);color:var(--blue);display:grid;place-items:center;font-size:27px;margin-bottom:25px}.service-card h3{margin:0;color:var(--navy);font-size:22px;line-height:1.25}body.dark .service-card h3{color:#fff}.service-card p{color:var(--muted);font-size:14px;margin:8px 0 0}.service-details{display:none;margin-top:17px;padding:14px 15px;background:var(--blueLight);border-radius:12px;color:var(--muted);font-size:13px;line-height:1.7}.service-link .service-details{display:block}.service-card.expanded .service-details{display:block;animation:fadeIn .25s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.price-section{margin-top:42px}.price-head{text-align:center;margin-bottom:20px}.price-head h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:29px;margin:0 0 7px}body.dark .price-head h3{color:#fff}.price-head p{margin:0;color:var(--muted);font-size:14px}.price-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 32px rgba(11,31,51,.06)}.price-table th,.price-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}.price-table th{background:var(--blueLight);color:var(--navy);font-weight:800}body.dark .price-table th{color:#fff}.price-table td{color:var(--muted)}.price-table tr:last-child td{border-bottom:0}.price-table td:last-child{font-weight:800;color:var(--blue);white-space:nowrap}
+.info{margin-top:25px;background:var(--goldSoft);border:1px solid rgba(200,155,60,.25);border-radius:20px;padding:21px 23px;display:flex;gap:13px;align-items:flex-start}.info i{color:var(--gold);font-size:19px;margin-top:2px}.info p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.info strong{color:var(--ink)}
+.cta{max-width:1180px;margin:0 auto 78px;padding:0 24px}.cta-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:28px;padding:39px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;box-shadow:var(--shadow)}.cta-box h2{color:#fff;margin:0 0 7px;font-family:"Playfair Display",serif;font-size:30px}.cta-box p{margin:0;color:rgba(255,255,255,.7)}.cta-box a{background:#fff;color:var(--navy);padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;white-space:nowrap}
+footer{background:#071725;color:#fff;padding:34px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font-weight:800}.footer-copy{color:rgba(255,255,255,.58);font-size:13px;margin-top:5px}.footer-links{display:flex;gap:16px}.footer-links a{color:rgba(255,255,255,.62);font-size:12px;text-decoration:none}.footer-links a:hover{color:#fff}
+@media(max-width:950px){.service-grid{grid-template-columns:1fr 1fr}}@media(max-width:820px){.hero-inner{grid-template-columns:1fr}.hero-card{max-width:620px}}@media(max-width:720px){.topbar{justify-content:center;text-align:center}.nav-inner{padding:13px 18px}.menu-btn{display:block}.nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block}.mode-toggle{width:100%}.hero{padding:58px 18px 68px}.hero h1{font-size:48px}.section{padding:58px 18px}.service-grid{grid-template-columns:1fr}.price-table{font-size:13px}.price-table th,.price-table td{padding:13px 12px}.cta{padding:0 18px;margin-bottom:58px}.cta-box{padding:29px 24px;flex-direction:column;align-items:flex-start}.footer-inner{flex-direction:column;align-items:flex-start}}@media(max-width:480px){.hero-actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="topbar"><span><i class="fa-solid fa-circle-check"></i> Accounting, taxation & business advisory</span><span><i class="fa-solid fa-phone"></i> +91-9935479764</span></div>
+<nav class="navbar"><div class="nav-inner">
+<a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span>Ease Consultancy</span></a>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+<ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a class="active" href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li></ul>
+</div></nav>
+
+<main>
+<section class="hero"><div class="hero-inner"><div>
+<span class="eyebrow"><i class="fa-solid fa-id-card"></i> Legal & compliance support</span>
+<h1>Essential Registrations, <span>Made Simple.</span></h1>
+<p>From PAN and TAN applications to Digital Signature Certificates, PF/ESI, FSSAI, IEC and MSME/Udyam registration, get practical compliance support in one place.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#services"><i class="fa-solid fa-arrow-down"></i> Explore Services</a><a class="btn btn-secondary" href="contact.html"><i class="fa-solid fa-headset"></i> Get Legal Support</a></div>
+</div>
+<div class="hero-card"><div class="hero-icon"><i class="fa-solid fa-id-card"></i></div>
+<h3>PAN, Aadhaar & MSME — plus the wider compliance stack.</h3>
+<p>This page redesigns the uploaded <strong>others.html</strong> content while keeping its actual services and starting prices.</p>
+<div class="mini-list"><div><i class="fa-solid fa-check"></i> PAN / TAN Services</div><div><i class="fa-solid fa-check"></i> Aadhaar & MSME/Udyam support</div><div><i class="fa-solid fa-check"></i> DSC, PF/ESI, FSSAI & IEC</div></div>
+</div></div></section>
+
+<section class="section" id="services">
+<div class="section-head"><div class="kicker">Legal & Compliance Support</div><h2>PAN, Aadhaar, MSME & essential registrations.</h2><p>The service content below is based on the uploaded <strong>others.html</strong> file. The original file lists seven compliance services and starting prices.</p></div>
+
+<div class="service-grid">
+<a class="service-card service-link" href="pan_services_subpages/pan-tan-services.html"><div class="service-icon"><i class="fa-solid fa-id-card"></i></div><h3>PAN / TAN Services</h3><p>Application & Correction</p><div class="service-details">Apply or correct PAN/TAN details for individuals or businesses.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/digital-signature-dsc.html"><div class="service-icon"><i class="fa-solid fa-key"></i></div><h3>Digital Signature (DSC)</h3><p>Class II & III</p><div class="service-details">Get Class II or Class III Digital Signature Certificates for official purposes.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/pf-esi-registration.html"><div class="service-icon"><i class="fa-solid fa-users"></i></div><h3>PF & ESI Registration</h3><p>Employee Benefits Compliance</p><div class="service-details">Register and manage Provident Fund (PF) and Employee State Insurance (ESI) compliance for staff.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/shop-act-registration.html"><div class="service-icon"><i class="fa-solid fa-store"></i></div><h3>Shop Act Registration</h3><p>For Local Business</p><div class="service-details">Get your business registered under the applicable local Shop & Establishment requirements.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/fssai-license.html"><div class="service-icon"><i class="fa-solid fa-utensils"></i></div><h3>FSSAI License</h3><p>Food Business Operators</p><div class="service-details">Apply for the applicable Food License (FSSAI) for food-related businesses.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/iec-code.html"><div class="service-icon"><i class="fa-solid fa-earth-asia"></i></div><h3>IEC Code</h3><p>For Import / Export</p><div class="service-details">Obtain Import Export Code (IEC) for international trade requirements.</div></a>
+<a class="service-card service-link" href="pan_services_subpages/msme-udyam.html"><div class="service-icon"><i class="fa-solid fa-industry"></i></div><h3>MSME / Udyam</h3><p>Micro & Small Enterprises</p><div class="service-details">Register under Udyam/MSME to support eligible small enterprises and access applicable government benefits.</div></a>
+</div>
+
+<div class="price-section">
+<div class="price-head"><h3>Starting Prices</h3><p>Prices retained from the uploaded source file.</p></div>
+<table class="price-table">
+<thead><tr><th>Service</th><th>Starting Price</th></tr></thead>
+<tbody>
+<tr><td>PAN / TAN Application</td><td>₹299</td></tr>
+<tr><td>DSC (Class II / III)</td><td>₹899</td></tr>
+<tr><td>PF / ESI Registration</td><td>₹1,499</td></tr>
+<tr><td>Shop Act Registration</td><td>₹999</td></tr>
+<tr><td>FSSAI License</td><td>₹1,299</td></tr>
+<tr><td>IEC Code Registration</td><td>₹999</td></tr>
+<tr><td>MSME / Udyam Certificate</td><td>₹499</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="info"><i class="fa-solid fa-circle-info"></i><p><strong>Pricing note:</strong><br>These are the starting prices contained in the uploaded source file. Final fees can depend on the service scope, government requirements and applicable documentation.</p></div>
+</section>
+
+<section class="cta"><div class="cta-box"><div><h2>Need registration or compliance support?</h2><p>Tell us what you need and get the right service for your business.</p></div><a href="contact.html">Get Legal Support <i class="fa-solid fa-arrow-right"></i></a></div></section>
+</main>
+
+<footer><div class="footer-inner"><div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2025 Ease Consultancy. All rights reserved.</div></div><div class="footer-links"><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></footer>
+
+<script>
+const body=document.body,modeToggle=document.getElementById("modeToggle"),navLinks=document.getElementById("navLinks"),menuBtn=document.getElementById("menuBtn");
+function updateIcon(){modeToggle.innerHTML=body.classList.contains("dark")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}
+if(localStorage.getItem("easeTheme")==="dark")body.classList.add("dark");updateIcon();
+modeToggle.addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("easeTheme",body.classList.contains("dark")?"dark":"light");updateIcon()});
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.innerHTML=navLinks.classList.contains("open")?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+
+</script>
+</body>
+</html>
