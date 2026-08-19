@@ -277,6 +277,139 @@
         <a class="btn btn-primary" href="contact.html">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </section>
+    <!-- ================= CONTACT CTA GROUP ================= -->
+<div id="ease-contact-cta">
+
+  <!-- Call Us -->
+  <a href="tel:+919935479764"
+     class="ease-contact-btn ease-call"
+     title="Call Ease Consultancy">
+    <i class="fa-solid fa-phone"></i>
+    <span>Call Us</span>
+  </a>
+
+  <!-- WhatsApp Us -->
+  <a href="https://wa.me/919935479764?text=Hello%20Ease%20Consultancy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+     target="_blank"
+     rel="noopener noreferrer"
+     class="ease-contact-btn ease-whatsapp"
+     title="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Email Us -->
+  <a href="mailto:your-email@example.com?subject=Service%20Enquiry"
+     class="ease-contact-btn ease-email"
+     title="Email Ease Consultancy">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email Us</span>
+  </a>
+
+  <!-- Send Enquiry -->
+  <a href="contact.html"
+     class="ease-contact-btn ease-enquiry"
+     title="Send an Enquiry">
+    <i class="fa-solid fa-pen-to-square"></i>
+    <span>Send Enquiry</span>
+  </a>
+
+</div>
+
+<style>
+  /* ================= CONTACT CTA GROUP ================= */
+
+  #ease-contact-cta {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99999;
+  }
+
+  #ease-contact-cta .ease-contact-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 21px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.20);
+    transition: all 0.25s ease;
+    overflow: hidden;
+  }
+
+  #ease-contact-cta .ease-contact-btn span {
+    display: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  #ease-contact-cta .ease-contact-btn:hover {
+    width: 155px;
+    border-radius: 28px;
+    transform: translateX(-3px);
+  }
+
+  #ease-contact-cta .ease-contact-btn:hover span {
+    display: inline;
+  }
+
+  /* Individual button colours */
+
+  #ease-contact-cta .ease-call {
+    background: #2563eb;
+  }
+
+  #ease-contact-cta .ease-whatsapp {
+    background: #25D366;
+  }
+
+  #ease-contact-cta .ease-email {
+    background: #7c3aed;
+  }
+
+  #ease-contact-cta .ease-enquiry {
+    background: #f59e0b;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 600px) {
+
+    #ease-contact-cta {
+      right: 14px;
+      bottom: 14px;
+      gap: 8px;
+    }
+
+    #ease-contact-cta .ease-contact-btn {
+      width: 48px;
+      height: 48px;
+      font-size: 19px;
+    }
+
+    #ease-contact-cta .ease-contact-btn:hover {
+      width: 48px;
+      border-radius: 50%;
+      transform: none;
+    }
+
+    #ease-contact-cta .ease-contact-btn span {
+      display: none !important;
+    }
+
+  }
+</style>
+
+<!-- ================= END CONTACT CTA GROUP ================= -->
   </main>
 
   <footer>
