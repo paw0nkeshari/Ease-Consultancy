@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Ease Consultancy</title>
+  <meta name="description" content="Contact Ease Consultancy for accounting, taxation, financial advisory and business support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --navy:#0b1f33; --navy2:#102d47; --blue:#1769aa; --blueLight:#eaf5ff;
+      --gold:#c89b3c; --goldSoft:#f6ecd6; --page:#f6f8fb; --card:#fff;
+      --ink:#17202a; --muted:#64748b; --line:#e5eaf0;
+      --shadow:0 24px 60px rgba(11,31,51,.12);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--page);transition:.25s}
+    body.dark{--page:#09131f;--card:#102030;--ink:#eef5fb;--muted:#aebdcc;--line:#25384a;--blueLight:#12283b;--goldSoft:#2b2518;--shadow:0 24px 60px rgba(0,0,0,.28)}
+    a{color:inherit} button,input,textarea{font:inherit}
+
+    .topbar{background:var(--navy);color:#fff;padding:10px 5%;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}
+    .topbar span{opacity:.88}
+    .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    body.dark .navbar{background:rgba(16,32,48,.94)}
+    .nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}
+    body.dark .brand{color:#fff}
+    .brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;box-shadow:0 8px 20px rgba(23,105,170,.25)}
+    .nav-links{display:flex;align-items:center;gap:7px;list-style:none;padding:0;margin:0}
+    .nav-links a{text-decoration:none;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted);transition:.2s}
+    .nav-links a:hover,.nav-links a.active{background:var(--blueLight);color:var(--blue)}
+    .mode-toggle{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:11px;cursor:pointer}
+    .menu-btn{display:none;border:0;background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.18),transparent 25%),linear-gradient(135deg,#eef7ff 0%,#fff 55%,#f7f3ea 100%);padding:76px 24px 84px;text-align:center}
+    body.dark .hero{background:radial-gradient(circle at 82% 15%,rgba(200,155,60,.12),transparent 25%),linear-gradient(135deg,#0d2134 0%,#0b1723 60%,#211d13 100%)}
+    .hero-inner{max-width:800px;margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--goldSoft);color:#8b6a25;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+    body.dark .eyebrow{color:#e7c96f}
+    .hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,64px);line-height:1.04;letter-spacing:-2px;margin:20px 0 14px;color:var(--navy)}
+    body.dark .hero h1{color:#fff}.hero h1 span{color:var(--blue)}body.dark .hero h1 span{color:#65b7ef}
+    .hero p{color:var(--muted);font-size:17px;line-height:1.8;margin:0 auto;max-width:670px}
+
+    .section{max-width:1180px;margin:auto;padding:78px 24px}
+    .contact-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:stretch}
+    .info-card,.form-card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+    .info-card{padding:31px}
+    .section-kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
+    .info-card h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:34px;margin:9px 0 12px}
+    body.dark .info-card h2{color:#fff}
+    .intro{color:var(--muted);line-height:1.75;margin:0 0 25px}
+    .contact-list{display:grid;gap:14px}
+    .contact-item{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+    .contact-item:last-child{border-bottom:0}
+    .contact-icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:var(--blueLight);color:var(--blue);flex:0 0 auto}
+    .contact-item strong{display:block;font-size:13px;margin-bottom:3px}.contact-item span,.contact-item a{font-size:13px;color:var(--muted);text-decoration:none;line-height:1.5}
+    .social{display:flex;gap:9px;margin-top:23px}
+    .social a{width:39px;height:39px;border:1px solid var(--line);border-radius:11px;display:grid;place-items:center;color:var(--blue);text-decoration:none;transition:.2s}
+    .social a:hover{background:var(--blueLight);transform:translateY(-2px)}
+
+    .map-card{margin-top:24px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .map-head{padding:19px 23px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+    .map-head i{color:var(--blue)}.map-head strong{font-size:14px}
+    iframe{display:block;width:100%;height:330px;border:0}
+
+    .form-card{padding:31px}
+    .form-card h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:34px;margin:9px 0 8px}
+    body.dark .form-card h2{color:#fff}
+    .form-card>p{color:var(--muted);line-height:1.7;margin:0 0 24px}
+    form{display:grid;gap:14px}
+    .field{display:grid;gap:7px}.field label{font-size:12px;font-weight:800;color:var(--ink)}
+    input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--page);color:var(--ink);outline:none;transition:.2s}
+    input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,170,.10)}
+    textarea{resize:vertical;min-height:145px}
+    .submit{border:0;border-radius:12px;padding:14px 18px;background:var(--navy);color:#fff;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.2s}
+    .submit:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(11,31,51,.18)}
+    .form-note{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+
+    .cta{max-width:1180px;margin:0 auto 78px;padding:0 24px}
+    .cta-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:28px;padding:39px;display:flex;align-items:center;justify-content:space-between;gap:28px;color:#fff;box-shadow:var(--shadow)}
+    .cta-box h2{margin:0 0 7px;font-family:"Playfair Display",serif;font-size:30px}.cta-box p{margin:0;color:rgba(255,255,255,.7)}
+    .cta-box a{background:#fff;color:var(--navy);padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:800;white-space:nowrap}
+
+    footer{background:#071725;color:#fff;padding:34px 24px}
+    .footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .footer-brand{font-weight:800}.footer-copy{color:rgba(255,255,255,.58);font-size:13px;margin-top:5px}
+    .footer-links{display:flex;gap:16px}.footer-links a{color:rgba(255,255,255,.62);font-size:12px;text-decoration:none}.footer-links a:hover{color:#fff}
+
+    @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    @media(max-width:720px){
+      .topbar{justify-content:center;text-align:center}.nav-inner{padding:13px 18px}.menu-btn{display:block}
+      .nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block}.mode-toggle{width:100%}
+      .hero{padding:58px 18px 68px}.hero h1{font-size:48px}.section{padding:58px 18px}.cta{padding:0 18px;margin-bottom:58px}.cta-box{padding:29px 24px;flex-direction:column;align-items:flex-start}.footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span><i class="fa-solid fa-circle-check"></i> Accounting, taxation & business advisory</span>
+    <span><i class="fa-solid fa-phone"></i> +91-9935479764</span>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span>Ease Consultancy</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <a href="finance.html">Calculator</a>
+        <li><a href="Owner Profile Page.html">About Owner</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow"><i class="fa-solid fa-comments"></i> Let’s talk business</span>
+        <h1>Contact <span>Us</span></h1>
+        <p>Have a question, requirement or business challenge? Reach out to Ease Consultancy and let’s discuss the right way forward.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div>
+          <div class="info-card">
+            <div class="section-kicker">Get In Touch</div>
+            <h2>We’re here to help.</h2>
+            <p class="intro">Connect with us for accounting, taxation, financial advisory and business support. We’ll help you understand the next step.</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div><strong>Office</strong><span>Civil Lines M.G. Road, Prayagraj - 211001, India</span></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div><strong>Phone</strong><a href="tel:+919876543210">+91 9935479764</a></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div><strong>Email</strong><a href="contect.easeconsultancy@gmail.com">contect.easeconsultancy@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="social" aria-label="Social media">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <div class="map-head"><i class="fa-solid fa-map-location-dot"></i><strong>Find Us</strong></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.16497114198802!2d81.8345807720133!3d25.450311973417516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acaaeb1fa16d5%3A0xf53748ab4ef5aa94!2sMahatma%20Gandhi%20Marg%2C%20Prayagraj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1787634499032!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" allowfullscreen loading="lazy" title="Ease Consultancy location map"></iframe>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="section-kicker">Send An Enquiry</div>
+          <h2>Tell us what you need.</h2>
+          <p>Share a few details and our team can understand your requirement before getting in touch.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/mdenravb" method="POST">
+            <div class="field"><label for="name">Your Name</label><input id="name" type="text" name="name" placeholder="Enter your name" required></div>
+            <div class="field"><label for="email">Email Address</label><input id="email" type="email" name="email" placeholder="Enter your email" required></div>
+            <div class="field"><label for="message">Your Message</label><textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea></div>
+            <button class="submit" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            <p class="form-note">Your message will be securely submitted through Formspree.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-box">
+        <div><h2>Prefer to speak directly?</h2><p>Call us and discuss your requirement with the consultancy team.</p></div>
+        <a href="tel:+919935479764">Call Now <i class="fa-solid fa-phone"></i></a>
+      </div>
+    </section>
+    <!-- ================= CONTACT CTA GROUP ================= -->
+<div id="ease-contact-cta">
+
+  <!-- Call Us -->
+  <a href="tel:+919935479764"
+     class="ease-contact-btn ease-call"
+     title="Call Ease Consultancy">
+    <i class="fa-solid fa-phone"></i>
+    <span>Call Us</span>
+  </a>
+
+  <!-- WhatsApp Us -->
+  <a href="https://wa.me/919935479764?text=Hello%20Ease%20Consultancy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+     target="_blank"
+     rel="noopener noreferrer"
+     class="ease-contact-btn ease-whatsapp"
+     title="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Email Us -->
+  <a href="mailto:contect.easeconsultancy@gmail.com?subject=Service%20Enquiry"
+     class="ease-contact-btn ease-email"
+     title="Email Ease Consultancy">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email Us</span>
+  </a>
+
+  <!-- Send Enquiry -->
+  <a href="contact.html"
+     class="ease-contact-btn ease-enquiry"
+     title="Send an Enquiry">
+    <i class="fa-solid fa-pen-to-square"></i>
+    <span>Send Enquiry</span>
+  </a>
+
+</div>
+
+<style>
+  /* ================= CONTACT CTA GROUP ================= */
+
+  #ease-contact-cta {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99999;
+  }
+
+  #ease-contact-cta .ease-contact-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 21px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.20);
+    transition: all 0.25s ease;
+    overflow: hidden;
+  }
+
+  #ease-contact-cta .ease-contact-btn span {
+    display: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  #ease-contact-cta .ease-contact-btn:hover {
+    width: 155px;
+    border-radius: 28px;
+    transform: translateX(-3px);
+  }
+
+  #ease-contact-cta .ease-contact-btn:hover span {
+    display: inline;
+  }
+
+  /* Individual button colours */
+
+  #ease-contact-cta .ease-call {
+    background: #2563eb;
+  }
+
+  #ease-contact-cta .ease-whatsapp {
+    background: #25D366;
+  }
+
+  #ease-contact-cta .ease-email {
+    background: #7c3aed;
+  }
+
+  #ease-contact-cta .ease-enquiry {
+    background: #f59e0b;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 600px) {
+
+    #ease-contact-cta {
+      right: 14px;
+      bottom: 14px;
+      gap: 8px;
+    }
+
+    #ease-contact-cta .ease-contact-btn {
+      width: 48px;
+      height: 48px;
+      font-size: 19px;
+    }
+
+    #ease-contact-cta .ease-contact-btn:hover {
+      width: 48px;
+      border-radius: 50%;
+      transform: none;
+    }
+
+    #ease-contact-cta .ease-contact-btn span {
+      display: none !important;
+    }
+
+  }
+</style>
+
+<!-- ================= END CONTACT CTA GROUP ================= -->
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2025 Ease Consultancy. All rights reserved.</div></div>
+      <div class="footer-links"><a href="terms-disclaimer.html">Disclaimer</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-disclaimer.html">Terms of Use</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const body=document.body, modeToggle=document.getElementById("modeToggle"), navLinks=document.getElementById("navLinks"), menuBtn=document.getElementById("menuBtn");
+    function updateIcon(){modeToggle.innerHTML=body.classList.contains("dark")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}
+    if(localStorage.getItem("easeTheme")==="dark")body.classList.add("dark"); updateIcon();
+    modeToggle.addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("easeTheme",body.classList.contains("dark")?"dark":"light");updateIcon()});
+    menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.innerHTML=navLinks.classList.contains("open")?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+
+    // Formspree handles the form submission directly.
+    // No preventDefault() is used so the POST request can be sent.
+  </script>
+</body>
+</html>
