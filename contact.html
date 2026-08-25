@@ -175,13 +175,47 @@
           <h2>Tell us what you need.</h2>
           <p>Share a few details and our team can understand your requirement before getting in touch.</p>
 
-          <form id="contactForm">
-            <div class="field"><label for="name">Your Name</label><input id="name" type="text" name="name" placeholder="Enter your name" required></div>
-            <div class="field"><label for="email">Email Address</label><input id="email" type="email" name="email" placeholder="Enter your email" required></div>
-            <div class="field"><label for="message">Your Message</label><textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea></div>
-            <button class="submit" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-            <p class="form-note">Your existing form is retained as a front-end enquiry form. A backend/email service is required for actual message delivery.</p>
-          </form>
+          <form id="contactForm" action="https://formspree.io/f/mdenravb" method="POST">
+  <div class="field">
+    <label for="name">Your Name</label>
+    <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="Enter your name"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="email">Email Address</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="message">Your Message</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Tell us how we can help..."
+      required
+    ></textarea>
+  </div>
+
+  <button class="submit" type="submit">
+    <i class="fa-solid fa-paper-plane"></i> Send Message
+  </button>
+
+  <p class="form-note">
+    Your message will be securely sent to us.
+  </p>
+</form>
         </div>
       </div>
     </section>
