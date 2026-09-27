@@ -530,7 +530,7 @@
 
     .testimonial strong { font-size: 13px; }
 
-    .cta-section { padding-top: 0; }
+    .cta-section { padding-top: 32px; }
 
     .cta {
       background: linear-gradient(135deg, var(--navy), var(--navy-2));
@@ -637,6 +637,34 @@
       .visual-card { padding: 22px; }
       .hero-actions .btn { width: 100%; }
     }
+
+
+    /* ================= SCROLLING OFFICIAL UPDATES ================= */
+    .updates-section{background:linear-gradient(180deg,rgba(234,245,255,.55),rgba(246,248,251,0));margin-top:32px;}
+    body.dark .updates-section{background:linear-gradient(180deg,rgba(18,40,59,.55),rgba(9,19,31,0));}
+
+    @media (max-width: 720px){ .updates-section{ margin-top:24px; } }
+    .updates-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:22px;}
+    .updates-head-row .section-head{flex:1;min-width:0;}
+    .updates-meta{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);background:var(--card);border-radius:999px;color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap;margin-bottom:4px;}
+    .updates-meta i{color:var(--blue);}
+    .updates-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 14px;}
+    .update-filter{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:8px 13px;font-size:11px;font-weight:800;cursor:pointer;transition:.2s;}
+    .update-filter:hover,.update-filter.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+    .updates-window{height:430px;overflow-y:auto;scroll-behavior:smooth;padding:8px 8px 8px 8px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.42);box-shadow:0 12px 30px rgba(11,31,51,.045);}
+    body.dark .updates-window{background:rgba(10,22,34,.4);}
+    .updates-window::-webkit-scrollbar{width:9px;}.updates-window::-webkit-scrollbar-thumb{background:rgba(23,105,170,.38);border-radius:20px;border:2px solid transparent;background-clip:padding-box;}.updates-window::-webkit-scrollbar-track{background:transparent;}
+    .update-row{display:grid;grid-template-columns:105px minmax(0,1fr) 72px;align-items:center;column-gap:18px;padding:13px 16px;margin:0 0 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;min-height:68px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;}
+    .update-row:last-child{margin-bottom:0;}.update-row:hover{border-color:rgba(23,105,170,.35);box-shadow:0 6px 16px rgba(11,31,51,.06);transform:translateX(1px);}
+    .update-badge{display:inline-flex;align-items:center;justify-content:center;width:105px;padding:7px 8px;border-radius:8px;background:var(--blue-light);color:var(--blue);font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.35px;text-align:center;line-height:1.2;}
+    .update-row-main{min-width:0;}.update-row h3{margin:0;color:var(--navy);font-size:13px;line-height:1.4;font-weight:800;}.update-row h3 a{color:inherit;text-decoration:none;}.update-row h3 a:hover{color:var(--blue);}
+    body.dark .update-row h3{color:#fff;}.update-row-meta{margin-top:5px;color:var(--muted);font-size:10px;line-height:1.2;white-space:nowrap;}.update-row-meta i{color:var(--gold);margin-right:4px;}
+    .update-read{display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;color:var(--blue);text-decoration:none;font-size:10px;font-weight:900;min-width:72px;}.update-read:hover{text-decoration:underline;}
+    .updates-note{margin-top:12px;padding:11px 15px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.72);color:var(--muted);font-size:10px;line-height:1.5;}.updates-note strong{color:var(--ink);}.updates-note a{color:var(--blue);}
+    body.dark .updates-note{background:rgba(16,32,48,.72);}
+    @media(max-width:720px){.updates-head-row{align-items:flex-start;flex-direction:column;gap:12px;}.updates-meta{margin-bottom:0;}.updates-window{height:390px;padding:6px;}.update-row{grid-template-columns:78px minmax(0,1fr) 28px;column-gap:10px;padding:12px;align-items:center;}.update-badge{width:78px;font-size:8px;}.update-row h3{font-size:12px;}.update-row-meta{font-size:9px;}.update-read{font-size:0;min-width:28px;}.update-read i{font-size:11px;}}
+    /* ================= END SCROLLING OFFICIAL UPDATES ================= */
+
   </style>
 </head>
 
@@ -752,6 +780,287 @@
         </div>
       </div>
     </section>
+
+
+
+    <!-- ================= SCROLLING OFFICIAL UPDATES ================= -->
+    <section class="section updates-section" aria-labelledby="daily-updates-title">
+      <div class="updates-head-row">
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="section-kicker">Latest Official Updates</div>
+          <h2 id="daily-updates-title">Business &amp; Compliance Updates</h2>
+          <p>Important headlines from official government and regulatory sources. Scroll to browse the full list and open the original source.</p>
+        </div>
+        <div class="updates-meta"><i class="fa-regular fa-clock"></i><span>Updated: 27 Sep 2026</span></div>
+      </div>
+      <div class="updates-toolbar" aria-label="Filter updates">
+        <button class="update-filter active" data-filter="all">All</button>
+        <button class="update-filter" data-filter="Income Tax">Income Tax</button>
+        <button class="update-filter" data-filter="SEBI">SEBI</button>
+        <button class="update-filter" data-filter="GST / CBIC">GST / CBIC</button>
+        <button class="update-filter" data-filter="MCA">MCA</button>
+        <button class="update-filter" data-filter="EPFO">EPFO</button>
+      </div>
+      <div class="updates-window" id="updatesWindow">
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">CBDT Notification No. 121/2026 updates TDS reporting requirements for certain non-resident property transactions.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>24 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">CBDT Notification No. 120/2026 extends the registration deadline for specified registered valuers and authorised income-tax practitioners to 31 March 2027.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>24 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">CBDT Notification No. 3 of 2026 sets the procedure for registration of reporting persons/entities and submission of Form 98.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>21 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">CBDT Notification No. 114/2026 notifies rules and prescribed forms under the Foreign Assets of Small Taxpayers Disclosure Scheme, 2026.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>01 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Offline utility of ITR-6 for AY 2026-27 is available on the e-Filing portal.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>20 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Online filing of ITR-6 for AY 2026-27 is available on the e-Filing portal.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>18 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Offline utility of ITR-7 for AY 2026-27 is available for filing.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>14 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Online utility of ITR-7 for AY 2026-27 is enabled for filing.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>11 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Offline utility of ITR-5 for AY 2026-27 is available for filing.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>07 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Online utility of ITR-5 for AY 2026-27 is available on the e-Filing portal.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>05 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">Excel utility of ITR-6 for AY 2026-27 became available on the e-Filing portal.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>04 Aug 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="Income Tax">
+          <span class="update-badge">Income Tax</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer">CBDT Notification No. 97/2026 introduces Form ITR-BN and amendments relating to search and requisition cases.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>27 Jul 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">Key decisions taken in the SEBI Board Meeting dated 24 September 2026.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>24 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=4&smid=107&ssid=80" target="_blank" rel="noopener noreferrer">SEBI Bulletin - September 2026 [Annexure Tables].</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>23 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=4&smid=107&ssid=80" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">Technology-based common reporting mechanism extended to members of Clearing Corporations.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>17 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">Felicitation of winners of Securities Market TechSprint at Global Fintech Fest 2026.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>11 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">Successful launch of Demat 2.0 pilot project for tokenised corporate bonds.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>10 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">SEBI Chairman participated in a keynote and panel discussion during Global Fintech Fest 2026.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>10 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">SEBI signs MoU with the European Securities and Markets Authority on cooperation and information exchange relating to central counterparties.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>04 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">SEBI publishes the latest market and regulatory information through its official media and notifications section.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>03 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer">Advisory No. 10/2026 covers Central Excise CE INT-01 and CE INT-02 filing procedures.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>09 Jun 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer">Advisory No. 08/2026 covers Central Excise amendment declaration filing procedure.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>24 Apr 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer">Advisory No. 05/2026 covers the Central Excise PMT-01 filing procedure.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>10 Feb 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer">Advisory No. 03/2026 covers Central Excise declaration filing procedure.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>05 Feb 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/advisories-aces-tax-payers.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/aces/hindi/aces.html" target="_blank" rel="noopener noreferrer">Advisory No. 11/2026 introduces two-factor authentication for specified Central Excise, SBS and HSNS taxpayers.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>24 Jun 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/aces/hindi/aces.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="GST / CBIC">
+          <span class="update-badge">GST / CBIC</span>
+          <div class="update-row-main">
+            <h3><a href="https://cbic-gst.gov.in/advisories-hsns.html" target="_blank" rel="noopener noreferrer">Advisory No. 09/2026 covers HSNS INT-01/INT-02 filing procedure for sealing and de-sealing requests.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>05 Jun 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://cbic-gst.gov.in/advisories-hsns.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="MCA">
+          <span class="update-badge">MCA</span>
+          <div class="update-row-main">
+            <h3><a href="https://mca.gov.in/content/mca/global/en/home.html" target="_blank" rel="noopener noreferrer">MCA lists an extension of the validity period for name reservation and resubmission.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>20 Jun 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://mca.gov.in/content/mca/global/en/home.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="MCA">
+          <span class="update-badge">MCA</span>
+          <div class="update-row-main">
+            <h3><a href="https://mca.gov.in/content/mca/global/en/home.html" target="_blank" rel="noopener noreferrer">MCA continues publishing current company and LLP notifications, circulars and important updates on its official portal.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://mca.gov.in/content/mca/global/en/home.html" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="EPFO">
+          <span class="update-badge">EPFO</span>
+          <div class="update-row-main">
+            <h3><a href="https://unifiedportal-emp.epfindia.gov.in/epfo/" target="_blank" rel="noopener noreferrer">EPFO portal records its latest update and highlights current employer/member services and security guidance.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>25 Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://unifiedportal-emp.epfindia.gov.in/epfo/" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="EPFO">
+          <span class="update-badge">EPFO</span>
+          <div class="update-row-main">
+            <h3><a href="https://unifiedportal-emp.epfindia.gov.in/epfo/" target="_blank" rel="noopener noreferrer">EPFO states that services are available through UMANG and provides current employer and member service information.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://unifiedportal-emp.epfindia.gov.in/epfo/" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="update-row" data-category="SEBI">
+          <span class="update-badge">SEBI</span>
+          <div class="update-row-main">
+            <h3><a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer">SEBI official listings provide current media, notifications, reports and regulatory publications for securities-market participants.</a></h3>
+            <div class="update-row-meta"><i class="fa-regular fa-calendar"></i>Sep 2026 &nbsp; • &nbsp; Official source</div>
+          </div>
+          <a class="update-read" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6" target="_blank" rel="noopener noreferrer" aria-label="Read official update">Read <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+      </div>
+      <div class="updates-note"><strong>Source policy:</strong> Headlines link directly to official government/regulatory sources. This section is an informational index; always open the official notification/circular for the complete text and current applicability.</div>
+    </section>
+    <script>
+      document.querySelectorAll('.update-filter').forEach(btn=>btn.addEventListener('click',()=>{
+        document.querySelectorAll('.update-filter').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+        const f=btn.dataset.filter; document.querySelectorAll('#updatesWindow .update-row').forEach(row=>{row.style.display=(f==='all'||row.dataset.category===f)?'flex':'none';});
+        document.getElementById('updatesWindow').scrollTop=0;
+      }));
+    </script>
+    <!-- ================= END SCROLLING OFFICIAL UPDATES ================= -->
 
     <section class="section">
       <div class="section-head">
