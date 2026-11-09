@@ -435,7 +435,207 @@ body.midnight .ease-live-clock{background:#18251f;color:#edf2e9;border-color:#b2
 #ease-contact-cta .ease-email{background:#8b6337!important}
 #ease-contact-cta .ease-enquiry{background:#315b78!important}
 @media(max-width:600px){#ease-contact-cta{right:14px!important;bottom:78px!important}#ease-contact-cta .ease-contact-toggle{width:56px!important;height:56px!important}}
-</style></head>
+</style><style id="ease-bottom-quicklinks-style">
+/* Bottom quick links: Careers, Consultation and Contact */
+.ease-bottom-quicklinks{width:min(100% - 40px,1200px);margin:0 auto 24px;padding:22px clamp(16px,3vw,30px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border:1px solid var(--line,#e5ddce);border-radius:20px;background:var(--card,#fffaf0);box-shadow:0 10px 28px rgba(26,39,30,.06)}
+.ease-bottom-quicklinks a{min-width:0;min-height:58px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border:1px solid var(--line,#ded3bf);border-radius:13px;background:var(--page,#f5f0e6);color:var(--ink,#27382f)!important;text-decoration:none!important;font-size:15px;font-weight:750;line-height:1.25;text-align:center;white-space:normal;overflow-wrap:anywhere;transition:transform .18s,background .18s,border-color .18s}
+.ease-bottom-quicklinks a:hover{transform:translateY(-2px);border-color:var(--gold,#b28a45);background:var(--blue-light,#eee4cf)}
+.ease-bottom-quicklinks a i{color:var(--gold,#a98242);font-size:17px;flex:0 0 auto}
+body.dark .ease-bottom-quicklinks,body.midnight .ease-bottom-quicklinks{background:var(--card,#18251f);border-color:var(--line,#34463c)}
+body.dark .ease-bottom-quicklinks a,body.midnight .ease-bottom-quicklinks a{background:var(--page,#101916);color:var(--ink,#edf2e9)!important;border-color:var(--line,#34463c)}
+@media(max-width:680px){.ease-bottom-quicklinks{width:calc(100% - 28px);grid-template-columns:1fr;gap:9px;padding:14px;margin-bottom:18px}.ease-bottom-quicklinks a{min-height:48px;font-size:14px}}
+</style><style id="ease-nav-compact-typography">
+/* Navigation typography and spacing refinement */
+@media(min-width:1181px){
+ .navbar .nav-inner{width:calc(100% - 40px)!important;max-width:1680px!important;gap:10px!important;padding:9px 0!important}
+ .navbar .brand{margin-right:8px!important;flex:0 0 auto!important}
+ .navbar .nav-links{justify-content:flex-start!important;gap:1px!important}
+ .navbar .nav-links>li{flex:0 0 auto!important}
+ .navbar .nav-links>li>a{font-size:14px!important;font-weight:650!important;letter-spacing:-.015em!important;padding:9px 8px!important;line-height:1.15!important}
+ .navbar .nav-links .ease-nav-search-item{margin-left:auto!important;margin-right:4px!important;flex:0 1 215px!important;width:215px!important;min-width:185px!important;max-width:225px!important}
+ .navbar .nav-links .ease-nav-search{min-height:44px!important;height:44px!important;padding-inline:11px!important}
+ .navbar .nav-links .ease-nav-search input{font-size:13px!important}
+ .navbar .nav-links>li:has(#modeToggle){flex:0 0 42px!important}
+ .navbar #modeToggle{width:42px!important;height:42px!important}
+}
+@media(max-width:1180px){
+ .navbar .nav-inner{width:calc(100% - 28px)!important;gap:8px!important}
+ .navbar .menu-btn{display:inline-flex!important}
+ .navbar .nav-links{display:none!important}
+ .navbar .nav-links.open{display:flex!important}
+ .navbar .nav-links>li>a{font-size:15px!important;padding:11px 13px!important}
+ .navbar .nav-links .ease-nav-search-item{width:100%!important;max-width:none!important;min-width:0!important;margin:6px 0!important}
+}
+@media(max-width:560px){
+ .navbar .nav-links>li>a{font-size:15px!important}
+}
+</style><style id="ease-final-theme-layout">
+/* EASE CONSULTANCY — final high-contrast theme and layout system */
+:root{
+ --page:#ffffff!important;--card:#ffffff!important;--ink:#111827!important;
+ --muted:#4b5563!important;--line:#e5e7eb!important;--gold:#a8792d!important;
+ --gold-soft:#f7f0e3!important;--blue:#345b45!important;--blue-light:#edf4ef!important;
+ --navy:#20392c!important;--navy-2:#2f4b39!important;
+}
+body:not(.dark):not(.theme-midnight):not(.midnight){
+ background:#fff!important;color:#111827!important;
+ --page:#fff!important;--card:#fff!important;--ink:#111827!important;
+ --muted:#4b5563!important;--line:#e5e7eb!important;
+}
+body.dark{
+ background:#080808!important;color:#f5f5f5!important;
+ --page:#080808!important;--card:#151515!important;--ink:#f5f5f5!important;
+ --muted:#c5c5c5!important;--line:#343434!important;--blue-light:#252525!important;
+ --gold-soft:#302719!important;--navy:#f5f5f5!important;--navy-2:#e5e5e5!important;
+}
+body.theme-midnight,body.midnight{
+ background:#101916!important;color:#edf2e9!important;
+ --page:#101916!important;--card:#18251f!important;--ink:#edf2e9!important;
+ --muted:#c2cec4!important;--line:#3c5145!important;--blue-light:#293b31!important;
+ --gold-soft:#303629!important;--navy:#edf2e9!important;--navy-2:#d9e3da!important;
+}
+body,body p,body li,body label,body small{color:var(--ink)}
+/* Navigation: deliberate gap after the company identity, compact menu, no overflow */
+@media(min-width:1281px){
+ .navbar .nav-inner{
+  width:calc(100% - 64px)!important;max-width:1740px!important;
+  min-height:82px!important;padding:10px 0!important;
+  display:flex!important;flex-wrap:nowrap!important;align-items:center!important;
+  gap:0!important;margin-inline:auto!important;
+ }
+ .navbar .brand{flex:0 0 auto!important;margin-right:clamp(26px,4vw,76px)!important;min-width:max-content!important}
+ .navbar .nav-links{
+  display:flex!important;visibility:visible!important;opacity:1!important;
+  flex:1 1 auto!important;min-width:0!important;width:auto!important;
+  margin-left:auto!important;justify-content:flex-end!important;align-items:center!important;
+  flex-wrap:nowrap!important;gap:clamp(1px,.25vw,5px)!important;
+  position:static!important;background:transparent!important;padding:0!important;
+ }
+ .navbar .nav-links>li{display:block!important;flex:0 0 auto!important;min-width:0!important}
+ .navbar .nav-links>li>a{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  white-space:nowrap!important;word-break:keep-all!important;overflow-wrap:normal!important;
+  font-size:14px!important;line-height:1.15!important;font-weight:700!important;
+  padding:10px clamp(6px,.55vw,11px)!important;color:var(--muted)!important;
+ }
+ .navbar .nav-links>li>a:hover,.navbar .nav-links>li>a.active{
+  color:var(--ink)!important;background:var(--blue-light)!important
+ }
+ .navbar .nav-links .ease-nav-search-item{
+  order:99!important;flex:0 1 220px!important;width:220px!important;
+  min-width:180px!important;max-width:235px!important;margin:0 4px 0 12px!important;
+ }
+ .navbar .nav-links .ease-nav-search{
+  width:100%!important;min-height:46px!important;height:46px!important;
+  background:var(--card)!important;border:1px solid var(--gold)!important;
+ }
+ .navbar .nav-links .ease-nav-search input{
+  color:var(--ink)!important;background:transparent!important;font-size:14px!important;
+ }
+ .navbar .nav-links .ease-nav-search input::placeholder{color:var(--muted)!important;opacity:1}
+ .navbar .nav-links>li:has(#modeToggle){order:100!important;flex:0 0 46px!important}
+ .navbar #modeToggle{
+  display:grid!important;place-items:center!important;width:46px!important;height:46px!important;
+  color:var(--ink)!important;background:var(--card)!important;border:1px solid var(--gold)!important;
+ }
+ .navbar .menu-btn{display:none!important;visibility:hidden!important}
+}
+@media(max-width:1280px){
+ .navbar .nav-inner{width:calc(100% - 32px)!important;max-width:none!important;gap:10px!important;flex-wrap:wrap!important}
+ .navbar .brand{margin-right:0!important}
+ .navbar .menu-btn{display:inline-flex!important;visibility:visible!important;align-items:center!important;justify-content:center!important;margin-left:auto!important}
+ .navbar .nav-links{display:none!important;visibility:hidden!important;opacity:0!important;position:static!important;flex:0 0 100%!important;width:100%!important;flex-direction:column!important;align-items:stretch!important;gap:4px!important;padding:10px!important;background:var(--card)!important;border:1px solid var(--line)!important;border-radius:14px!important}
+ .navbar .nav-links.open{display:flex!important;visibility:visible!important;opacity:1!important}
+ .navbar .nav-links>li{display:block!important;width:100%!important;flex:0 0 auto!important}
+ .navbar .nav-links>li>a{display:flex!important;width:100%!important;justify-content:flex-start!important;white-space:normal!important;font-size:15px!important;color:var(--ink)!important;padding:12px 14px!important}
+ .navbar .nav-links .ease-nav-search-item{order:99!important;display:block!important;width:100%!important;max-width:none!important;min-width:0!important;flex:0 0 auto!important;margin:7px 0!important;padding:0!important}
+ .navbar .nav-links .ease-nav-search{width:100%!important;min-height:46px!important}
+ .navbar .nav-links>li:has(#modeToggle){order:100!important}
+ .navbar #modeToggle{width:100%!important;height:44px!important;color:var(--ink)!important;background:var(--card)!important}
+}
+@media(max-width:560px){
+ .navbar .nav-inner{width:calc(100% - 24px)!important;min-height:68px!important}
+ .navbar .brand-copy>span{font-size:16px!important}
+ .navbar .brand-copy small{font-size:8px!important}
+}
+/* Strong readable colours for all three bottom quick links */
+#ease-bottom-quicklinks{
+ background:var(--card)!important;border:1px solid var(--line)!important;
+ padding:22px clamp(16px,3vw,30px)!important;gap:16px!important;
+}
+#ease-bottom-quicklinks a{
+ background:var(--page)!important;color:var(--ink)!important;
+ border:1px solid var(--line)!important;font-size:16px!important;font-weight:750!important;
+ line-height:1.35!important;padding:15px 18px!important;min-height:62px!important;
+}
+#ease-bottom-quicklinks a, #ease-bottom-quicklinks a:visited,
+#ease-bottom-quicklinks a span{color:var(--ink)!important}
+#ease-bottom-quicklinks a i{color:var(--gold)!important}
+#ease-bottom-quicklinks a:hover{background:var(--blue-light)!important;color:var(--ink)!important}
+body.dark #ease-bottom-quicklinks a{background:#080808!important;color:#fff!important;border-color:#454545!important}
+body.dark #ease-bottom-quicklinks a,body.dark #ease-bottom-quicklinks a:visited{color:#fff!important}
+body.theme-midnight #ease-bottom-quicklinks a,body.midnight #ease-bottom-quicklinks a{background:#101916!important;color:#edf2e9!important;border-color:#526458!important}
+body.theme-midnight #ease-bottom-quicklinks a,body.midnight #ease-bottom-quicklinks a:visited{color:#edf2e9!important}
+/* FAQ and content cards: consistent padding, readable contrast and balanced gaps */
+.ease-faq-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important;align-items:stretch!important}
+.ease-faq-item{
+ min-width:0!important;padding:24px 26px!important;margin:0!important;
+ border:1px solid var(--line)!important;border-radius:20px!important;
+ background:var(--card)!important;color:var(--ink)!important;
+ box-shadow:0 8px 24px rgba(0,0,0,.055)!important;
+}
+.ease-faq-item h3,.ease-faq-item h4,.ease-faq-item strong{color:var(--ink)!important;line-height:1.4!important}
+.ease-faq-item p,.ease-faq-item li{color:var(--muted)!important;line-height:1.7!important}
+body.dark .ease-faq-item{background:#151515!important;border-color:#363636!important}
+body.dark .ease-faq-item h3,body.dark .ease-faq-item h4,body.dark .ease-faq-item strong{color:#fff!important}
+body.dark .ease-faq-item p,body.dark .ease-faq-item li{color:#d0d0d0!important}
+body.theme-midnight .ease-faq-item,body.midnight .ease-faq-item{background:#18251f!important;border-color:#3c5145!important}
+body.theme-midnight .ease-faq-item h3,body.midnight .ease-faq-item h3,
+body.theme-midnight .ease-faq-item h4,body.midnight .ease-faq-item h4{color:#edf2e9!important}
+body.theme-midnight .ease-faq-item p,body.midnight .ease-faq-item p{color:#c2cec4!important}
+@media(max-width:760px){.ease-faq-grid{grid-template-columns:1fr!important;gap:13px!important}.ease-faq-item{padding:19px!important}}
+/* Inputs, labels, headings and footer inherit high-contrast theme tokens */
+input,select,textarea{color:var(--ink)}
+body.dark input,body.dark select,body.dark textarea{background:#080808!important;color:#fff!important;border-color:#555!important}
+body.theme-midnight input,body.midnight input,body.theme-midnight select,body.midnight select,
+body.theme-midnight textarea,body.midnight textarea{background:#101916!important;color:#edf2e9!important;border-color:#526458!important}
+body.dark .navbar{background:rgba(8,8,8,.97)!important}
+body:not(.dark):not(.theme-midnight):not(.midnight) .navbar{background:rgba(255,255,255,.97)!important}
+body.theme-midnight .navbar,body.midnight .navbar{background:rgba(16,25,22,.97)!important}
+</style><style id="ease-final-nav-visibility-hotfix">
+/* FINAL NAV VISIBILITY HOTFIX: keep full menu visible on desktop and compact laptops */
+@media(min-width:901px){
+ .navbar .nav-inner{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:0!important;width:calc(100% - 48px)!important;max-width:1740px!important;margin-inline:auto!important;min-height:78px!important;padding:9px 0!important}
+ .navbar .brand{display:flex!important;flex:0 0 auto!important;visibility:visible!important;margin-right:clamp(18px,2.2vw,42px)!important;min-width:max-content!important}
+ .navbar #menuBtn,.navbar .menu-btn{display:none!important;visibility:hidden!important}
+ .navbar .nav-links{display:flex!important;visibility:visible!important;opacity:1!important;position:static!important;flex:1 1 auto!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:nowrap!important;gap:clamp(0px,.18vw,3px)!important;width:auto!important;min-width:0!important;margin:0!important;padding:0!important;white-space:nowrap!important;background:transparent!important;border:0!important}
+ .navbar .nav-links>li{display:block!important;visibility:visible!important;flex:0 0 auto!important;width:auto!important;min-width:0!important}
+ .navbar .nav-links>li>a{display:inline-flex!important;align-items:center!important;justify-content:center!important;white-space:nowrap!important;word-break:keep-all!important;overflow-wrap:normal!important;font-size:clamp(11px,.82vw,14px)!important;line-height:1.1!important;font-weight:700!important;padding:9px clamp(4px,.42vw,8px)!important;color:var(--muted)!important}
+ .navbar .nav-links .ease-nav-search-item{display:block!important;visibility:visible!important;order:99!important;flex:0 1 clamp(150px,13vw,205px)!important;width:clamp(150px,13vw,205px)!important;min-width:145px!important;max-width:205px!important;margin:0 4px 0 10px!important;padding:0!important}
+ .navbar .nav-links .ease-nav-search{display:flex!important;width:100%!important;min-width:0!important;min-height:44px!important;height:44px!important}
+ .navbar .nav-links .ease-nav-search input{display:block!important;width:100%!important;min-width:0!important;font-size:12px!important}
+ .navbar .nav-links>li:has(#modeToggle){display:block!important;order:100!important;flex:0 0 42px!important;width:42px!important}
+ .navbar #modeToggle{display:grid!important;visibility:visible!important;width:42px!important;height:42px!important;flex:0 0 42px!important}
+}
+@media(max-width:900px){
+ .navbar .nav-inner{display:flex!important;flex-wrap:wrap!important;align-items:center!important;width:calc(100% - 28px)!important;max-width:none!important;gap:8px!important}
+ .navbar .brand{margin-right:0!important;max-width:calc(100% - 58px)!important}
+ .navbar #menuBtn,.navbar .menu-btn{display:inline-flex!important;visibility:visible!important;align-items:center!important;justify-content:center!important;flex:0 0 44px!important;width:44px!important;height:44px!important;margin-left:auto!important}
+ .navbar .nav-links{display:none!important;visibility:hidden!important;opacity:0!important;position:static!important;flex:0 0 100%!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px!important;gap:4px!important;white-space:normal!important;background:var(--card)!important;border:1px solid var(--line)!important;border-radius:14px!important}
+ .navbar .nav-links.open{display:flex!important;visibility:visible!important;opacity:1!important}
+ .navbar .nav-links>li{display:block!important;width:100%!important;flex:0 0 auto!important}
+ .navbar .nav-links>li>a{display:flex!important;width:100%!important;justify-content:flex-start!important;white-space:normal!important;font-size:15px!important;padding:12px 14px!important;color:var(--ink)!important}
+ .navbar .nav-links .ease-nav-search-item{display:block!important;width:100%!important;min-width:0!important;max-width:none!important;flex:0 0 auto!important;margin:7px 0!important;padding:0!important}
+ .navbar .nav-links .ease-nav-search{width:100%!important;min-height:46px!important}
+ .navbar .nav-links>li:has(#modeToggle){display:block!important;width:100%!important;order:100!important}
+ .navbar #modeToggle{display:grid!important;width:100%!important;height:44px!important}
+}
+@media(max-width:560px){
+ .navbar .nav-inner{width:calc(100% - 20px)!important;min-height:66px!important}
+ .navbar .brand-copy>span{font-size:15px!important}
+ .navbar .brand-copy small{font-size:7px!important;letter-spacing:1px!important}
+}
+</style><link href="ease-ai-assistant.css" rel="stylesheet"/></head>
 <body>
 <div class="topbar">
 <span><i class="fa-solid fa-circle-check"></i> Accounting, taxation &amp; business advisory</span>
@@ -446,7 +646,7 @@ body.midnight .ease-live-clock{background:#18251f;color:#edf2e9;border-color:#b2
 <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span><span class="brand-copy"><span>Ease Consultancy</span><small>ACCOUNTING • TAX • ADVISORY</small></span></a>
 <button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
 <ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li><li><a class="active" href="services.html">Services</a></li><li><a href="finance.html">Calculator</a></li><li><a href="Owner Profile Page.html">About Owner</a></li><li><a href="about.html">About Us</a></li><li><a href="updates.html">Business Updates</a></li><li><a href="career.html">Careers</a></li><li><a href="consultation-availability.html">Book a Consultation</a></li><li><a href="contact.html">Contact Us</a></li>
+<li><a href="index.html">Home</a></li><li><a class="active" href="services.html">Services</a></li><li><a href="finance.html">Calculator</a></li><li><a href="Owner Profile Page.html">About Owner</a></li><li><a href="about.html">About Us</a></li><li><a href="updates.html">Business Updates</a></li>
 <li class="ease-nav-search-item">
 <div class="ease-nav-search"><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
 <input aria-label="Search website headings" autocomplete="off" id="easeNavSearchInput" placeholder="Search page headings…" type="search"/>
@@ -567,7 +767,7 @@ body.midnight .ease-live-clock{background:#18251f;color:#edf2e9;border-color:#b2
  Income earned during FY 2025-26 is generally filed for AY 2026-27 under the Income-tax Act, 1961. Income earned from 1 April 2026 onward is governed by the Income-tax Act, 2025 and is referred to by Tax Year (for example, Tax Year 2026-27). Earlier-year matters and pending proceedings continue under the applicable transition and savings provisions.
  <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/objective-and-scope-new-act" rel="noopener noreferrer" target="_blank">Read the Income Tax Department's transition FAQs</a>.
 </section>
-<footer>
+<footer><nav aria-label="Quick links" class="ease-bottom-quicklinks" id="ease-bottom-quicklinks"><a href="career.html"><i aria-hidden="true" class="fa-solid fa-briefcase"></i>Careers</a><a href="consultation-availability.html"><i aria-hidden="true" class="fa-solid fa-calendar-check"></i>Book a Consultation</a><a href="contact.html"><i aria-hidden="true" class="fa-solid fa-headset"></i>Contact Us</a></nav>
 <div class="footer-inner">
 <div><div class="footer-brand">Ease Consultancy</div><div class="footer-copy">© 2026 Ease Consultancy. All rights reserved.</div></div>
 <div class="footer-links"><a href="terms-and-conditions.html">Terms of Use</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-disclaimer.html">Service Disclaimer</a></div>
@@ -797,5 +997,43 @@ menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.
  const update=()=>{const now=new Date();time.textContent=timeFmt.format(now);date.textContent=dateFmt.format(now);};
  update();setInterval(update,1000);
 })();
-</script></body>
+</script><script id="ease-final-theme-controller">
+(()=>{
+ const body=document.body;
+ const original=document.getElementById("modeToggle");
+ if(!original)return;
+ const btn=original.cloneNode(true);
+ original.replaceWith(btn);
+ const themes=["light","dark","midnight"];
+ const icons={
+  light:'<i class="fa-solid fa-moon" aria-hidden="true"></i>',
+  dark:'<i class="fa-solid fa-sun" aria-hidden="true"></i>',
+  midnight:'<i class="fa-solid fa-star" aria-hidden="true"></i>'
+ };
+ const labels={light:"Switch to pure dark theme",dark:"Switch to midnight green theme",midnight:"Switch to pure white theme"};
+ const apply=t=>{
+  body.classList.remove("dark","midnight","theme-midnight");
+  if(t==="dark")body.classList.add("dark");
+  if(t==="midnight"){body.classList.add("midnight","theme-midnight");}
+  btn.innerHTML=icons[t]||icons.light;
+  btn.setAttribute("aria-label",labels[t]||labels.light);
+  btn.setAttribute("title",labels[t]||labels.light);
+  btn.setAttribute("data-current-theme",t);
+  try{localStorage.setItem("easeTheme",t)}catch(e){}
+ };
+ let current="light";
+ try{const saved=localStorage.getItem("easeTheme");if(themes.includes(saved))current=saved;}catch(e){}
+ apply(current);
+ btn.addEventListener("click",()=>{
+  current=themes[(themes.indexOf(current)+1)%themes.length];
+  apply(current);
+ });
+ window.addEventListener("storage",e=>{
+  if(e.key==="easeTheme"){
+   const next=themes.includes(e.newValue)?e.newValue:"light";
+   current=next;apply(next);
+  }
+ });
+})();
+</script><script defer="True" src="ease-ai-config.js"></script><script defer="True" src="ease-ai-knowledge.js"></script><script defer="True" src="ease-ai-assistant.js"></script></body>
 </html>
