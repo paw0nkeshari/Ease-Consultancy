@@ -1,0 +1,23 @@
+EASE CONSULTANCY WEBSITE UPDATE NOTES
+
+1. Universal heading search
+- The home page (index.html) loads heading-search-index.js.
+- Search matches only H1, H2 and H3 heading text. Paragraph/body text is not searched.
+- This ZIP currently contains 98 HTML pages and 1,213 searchable headings.
+- Keep heading-search-index.js in the same folder as index.html when uploading.
+
+2. Adding new pages later
+- The search index is a static file for static hosting. If you add, rename or remove HTML pages, regenerate heading-search-index.js so the new page headings are included.
+- Search results link to the exact root-level HTML filename and heading anchor.
+
+3. Shared navigation and contact options
+- All pages use the common navigation, shared easeTheme dark-mode key, and animated Call / WhatsApp / Email / Enquiry shortcuts.
+- Email used: contect.easeconsultancy@gmail.com
+- Phone / WhatsApp: +91 99354 79764
+- The enquiry shortcut opens contact.html#contactForm.
+
+4. FAQs
+- Each HTML page has a Frequently Asked Questions section. Answers are general guidance; confirm case-specific requirements, fees and statutory deadlines before relying on them.
+
+5. Official updates
+- The home page includes a small set of recently checked official updates with direct source links. Always open the official notification for full applicability and details.
