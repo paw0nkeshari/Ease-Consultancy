@@ -1,0 +1,41 @@
+VALIDATION REPORT — EASE CONSULTANCY EXPANDED AI
+
+Indexed pages: 102
+Question forms per page: 52
+Question-to-page mappings: 5,304
+Languages: English, Hinglish, Hindi
+Extracted visible section blocks: 421
+Pages with extracted section content: 102/102
+Total extracted visible section text: 138,220 characters
+
+Repository/source checks:
+- Existing ease-ai-knowledge.js blob matches current GitHub main branch.
+- Key source pages (home, GST services, GST registration, ITR filing and consultation availability) were hash-checked against current GitHub main and matched the source archive used for extraction.
+- Existing HTML script order loads ease-ai-config.js, ease-ai-knowledge.js, then ease-ai-assistant.js.
+- Current website Worker URL and 8-second config are preserved; ease-ai-config.js is intentionally not included for replacement.
+
+Code / runtime checks:
+- ease-ai-assistant.js: node --check PASS
+- ease-ai-knowledge.js: node --check PASS
+- Response library generated in a VM: 5,304 records PASS
+- All 5,304 response mappings point to one of the 102 indexed pages PASS
+- “hii” friendly greeting PASS
+- Roman Hindi “aap kaise hain?” response PASS
+- Service overview response PASS
+- GST registration question returns page-grounded details PASS
+- Short follow-up “documents?” retains prior topic PASS
+- ITR document question returns ITR-page content PASS
+- Human-support request “I want to speak to a consultant” provides contact/consultation links PASS
+- Simulated Gemini success uses the Gemini answer PASS
+- Simulated timeout (shortened test timeout) triggers local Self AI fallback PASS
+
+Production config:
+- The website's existing ease-ai-config.js is expected to keep geminiTimeoutMs: 8000.
+- The timeout test above used a shortened test value to avoid waiting 8 seconds during test execution; the published setting is still 8,000 milliseconds.
+
+Not tested:
+- Live GitHub Pages deployment after replacement
+- Live Gemini availability / actual production 8-second timeout on the deployed Worker
+- Real visitor traffic and all browser/device combinations
+
+Note: 5,304 means question-to-page response mappings. Final answers are composed from approved page content; they are not 5,304 independently authored expert answers.
