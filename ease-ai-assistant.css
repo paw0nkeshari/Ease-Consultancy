@@ -48,3 +48,28 @@ body.theme-midnight #ease-ai-input,body.theme-midnight #ease-ai-language,body.mi
 .ease-ai-speak{display:block;margin-top:7px;border:0;background:transparent;color:var(--gold,#a8792d);font-size:10px;font-weight:700;padding:0;cursor:pointer}
 body.dark #ease-ai-quicklinks{background:#151515}
 body.theme-midnight #ease-ai-quicklinks,body.midnight #ease-ai-quicklinks{background:#18251f}
+
+
+/* Ease AI launcher interaction fix */
+#ease-ai-root {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+}
+
+#ease-ai-launcher,
+#ease-ai-panel {
+  pointer-events: auto !important;
+}
+
+#ease-ai-launcher {
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 2147483647 !important;
+  touch-action: manipulation;
+}
+
+#ease-ai-launcher:hover {
+  cursor: pointer !important;
+  transform: translateY(-2px);
+}
